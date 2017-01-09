@@ -1,0 +1,750 @@
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+COLOR
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+$M_primary: #00a850;
+$M_second: #65c087;
+$M_third: #98d1a6;
+
+$gray: #8d8e92;
+$light-gray: #efefef;
+$black: #252122;
+$white: #fff;
+
+$screen-xs-min: 0px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+FOUNDATION SETTINGS
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+body{
+	margin: 0;
+	padding: 0;
+
+	.container{
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+
+		.row{
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 1600px;
+		}
+	}
+}
+
+.section{
+	width: 100%;
+}
+
+@media (min-width: $screen-md-min) { 
+
+	#about-text{
+		max-width: 785px;
+		float: right;
+	}
+
+}
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+TEXT
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+body{
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		color: $black;
+	}
+
+	p,
+	a,
+	li,
+	ul,
+	ol,
+	div,
+	span,
+	i{
+		font-family: 'Open Sans', sans-serif;
+		color: $black;
+	}
+
+}
+
+body{
+
+	h1,
+	.h1-heading-frontp{
+		font-size: 5rem;
+	}
+
+	h2{
+		font-size: 3rem;
+	}
+
+	h3{
+		font-size: 2rem;
+	}
+
+	h4{
+		font-size: 1.7rem;
+	}
+
+	p,
+	a,
+	li,
+	ul,
+	ol,
+	div,
+	span,
+	i{
+		font-size: 1.5rem;
+	}
+
+}
+
+.h2-underline-container{
+	width: 100%;
+	margin-bottom: 2.5rem;
+
+	.h2-underline{
+		width: 4rem;
+		border-bottom: 0.5rem solid $M_second;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+
+	body{
+
+		h1,
+		.h1-heading-frontp{
+			font-size: 7rem;
+		}
+
+		h2{
+			font-size: 3.5rem;
+		}
+
+		h3{
+			font-size: 2.5rem;
+		}
+
+		h4{
+			font-size: 1.9rem;
+		}
+
+		p,
+		a,
+		li,
+		ul,
+		ol,
+		div,
+		span,
+		i{
+			font-size: 1.6rem;
+		}
+
+	}
+
+}
+
+@media (min-width: $screen-md-min) {
+
+	body{
+
+		h1,
+		.h1-heading-frontp{
+			font-size: 8rem;
+		}
+
+		h2{
+			font-size: 4rem;
+		}
+
+		h3{
+			font-size: 3rem;
+		}
+
+		h4{
+			font-size: 2rem;
+		}
+
+		p,
+		a,
+		li,
+		ul,
+		ol,
+		div,
+		span,
+		i{
+			font-size: 1.65rem;
+		}
+
+	}
+
+}
+
+@media (min-width: $screen-lg-min) {
+
+	body{
+
+		h1,
+		.h1-heading-frontp{
+			font-size: 10rem;
+		}
+
+		h2{
+			font-size: 5rem;
+		}
+
+		h3{
+			font-size: 4rem;
+		}
+
+		h4{
+			font-size: 3rem;
+		}
+
+		p,
+		a,
+		li,
+		ul,
+		ol,
+		div,
+		span,
+		i{
+			font-size: 1.7rem;
+		}
+
+	}
+
+}
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+BUTTONS
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+.btn-cover{
+	width: 100%;
+	text-align: center;
+	margin: 6rem 0;
+	clear: both;
+}
+
+.btn-round{
+	text-transform: uppercase;
+	color: $white;
+	text-align: center;
+    padding: 2.5rem;
+    border-radius: 50rem;
+    border: 0.2rem $M_second solid;
+    background-color: $M_second;
+}
+
+.btn-round:hover{
+	background-color: $M_primary;
+	border: 0.2rem $M_primary solid;
+	color:$white;
+	text-decoration: none;
+}
+
+.btn-round:visited,
+.btn-round:focus{
+	color:$white;
+	text-decoration: none;
+}
+
+#btn-case{
+	float: left;
+	margin-bottom: 11rem;
+}
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+TOP-MENU
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+.top-header{
+	position: fixed;
+	width: 100%;
+	background-color: $white;
+	z-index: 9999;
+
+    nav{
+
+      .navbar {
+      	margin-bottom: 0;
+      	border: none;
+      	height: auto;
+
+        .logo-link{
+
+			.logo-img{
+				width: auto;
+				height: 5.5rem;
+				margin: 0.5rem;
+			}
+        }
+
+        .menu-primary-menu-container{
+
+          ul{
+
+            li{
+
+                a{
+
+                }
+              }
+            }
+          } 
+        }
+
+      .navbar_small {
+
+        .logo-link{
+
+			.logo-img{
+				width: auto;
+				height: 5.5rem;
+				margin: 0.5rem;
+			}
+        }
+
+        .menu-primary-menu-container{
+
+          ul{
+
+            li{
+
+                a{
+
+                }
+              }
+            }
+          } 
+        }
+      }
+    } 
+
+     .menu-primary-menu-container{
+			display: none;
+			height: 100vh;
+
+          ul{
+
+            li{
+            	text-align: center;
+
+                a{
+                	text-transform: uppercase;
+                	font-weight: 700;
+                }
+
+                a:active,
+                a:visited{
+                	background-color: $white;
+                	color: $black;
+                }
+
+                a:hover{
+                	background-color: $white;
+                	color: $M_primary;
+                }
+              }
+            }
+          } 
+
+.logo-img{
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+ }
+
+ #toggle-mobile-menu{
+ 	position: fixed;
+	width: 100%;
+	z-index: 99999;
+
+	.mobilemenu-bars{
+
+		 i{
+		 	color: $M_second;
+		 	font-family: FontAwesome;
+		 	padding: 1rem;
+		 	font-size: 5rem;
+		 	float: right;
+		 }
+
+		 i:hover{
+		 	color: $M_primary;
+		 	cursor: pointer;
+		 }
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+
+ .menu-primary-menu-container{
+			display: block;
+			height: auto;
+			float: right;
+
+          ul{
+
+            li{
+            	padding: 1rem;
+
+                a{
+                	font-size: 1.4rem;
+                }
+              }
+            }
+          } 
+
+  #toggle-mobile-menu{
+  	display: none;
+  }
+
+
+}
+
+@media (min-width: $screen-lg-min) {
+
+ .menu-primary-menu-container{
+
+          ul{
+
+            li{
+
+                a{
+                	font-size: 1.6rem;
+                }
+              }
+            }
+          } 
+
+  #toggle-mobile-menu{
+  	display: none;
+  }
+
+
+}
+
+
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+FRONT-PAGE
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+.header-frontp, 
+#case-frontp, 
+#about-frontp, 
+#map, 
+#contactform-frontp{
+	float: left;
+} 
+
+.header-frontp{
+	background-color: $gray;
+	background-size: cover; 
+	margin-top: 6.5rem;
+	width: 100%; 
+	height: auto;
+
+	.row{
+
+		.header-container{
+			padding: 2rem;
+
+			.h1-heading-frontp,
+			p{
+				color: $white; 
+				text-align: center;
+			}
+		}
+	}
+}
+
+.h1-heading-frontp{
+	padding: 4rem 1.5rem 1.5rem 1.5rem;
+}
+
+.section-container{
+	padding: 3rem;
+	clear: both;
+}
+
+.section-bread{
+	padding-bottom: 2rem;
+}
+
+#case-frontp{
+	width: 100%; 
+	height: auto;
+}
+
+#about-frontp{
+	width: 100%; 
+	height: auto;
+	background-color: $light-gray;
+
+	.about-frontp-divided{
+		float: left; 
+		width: 100%; 
+	}
+
+	#about-img-frontpage{
+		background-image: url('http://www.twitrcovers.com/wp-content/uploads/2012/09/Cute-Cat.jpg');
+		height: 250px;
+		background-size: cover;
+		background-position: center top;
+	}
+
+}
+
+#map{
+	width: 100%; 
+	height: 400px; 
+	background-color: $gray;
+}
+
+@media (min-width: $screen-sm-min) {
+
+	.header-frontp{ 
+		.row{
+			.header-container{
+				padding: 5rem;
+			}
+		}
+	}
+
+	.section-container{
+		text-align: center;
+
+		.h2-underline-container{
+
+			.h2-underline{
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.section-container{
+		padding: 5rem;
+	}
+
+	#about-frontp{
+
+		.about-frontp-divided{
+
+		}
+
+		#about-img-frontpage{
+			height: 400px;
+		}
+	}
+
+}
+
+@media (min-width: $screen-md-min) { 
+
+	.header-frontp{ 
+		.row{
+			.header-container{
+				padding: 7rem;
+			}
+		}
+	}
+
+	#about-frontp{
+
+		.about-frontp-divided{
+			width: 50%;
+		}
+
+		#about-img-frontpage{
+			height: 550px;
+
+		}
+
+		.about-frontp-divided{
+			
+			.section-container{
+				text-align: right;
+
+				.h2-underline-container{
+			
+					.h2-underline{
+						margin-right: 0;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media (min-width: $screen-lg-min) {  }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+CASE 
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+.case-container{
+	padding: 1rem;
+	width: 100%;
+	float: left;
+
+	.case-small-img{
+		width: 70vw;
+		height: 70vw;
+		margin-left: auto;
+		margin-right: auto;
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+
+		.case-heading{
+			color: $white;
+			font-size: 130%;
+			font-weight: 700;
+			text-align: center;
+			line-height: 70vw;
+			text-transform: uppercase;
+			background-color: rgba(0,0,0,0.3);
+		}
+
+		.case-heading:hover{
+			background-color: rgba(0,168,80,0.5);
+		}
+	}
+
+}
+
+.case-container:last-child{
+	float: none;
+	clear: both;
+	border: 2px solid yellow;
+}
+
+@media (min-width: $screen-sm-min) {
+
+	.case-container{
+		padding: 2rem;
+		width: 50%;
+
+		.case-small-img{
+			width: 40vw;
+			height: 40vw;
+
+			.case-heading{
+				line-height: 40vw;
+			}
+
+		}
+
+	}
+
+
+
+}
+
+@media (min-width: $screen-md-min) {
+
+	.case-container{
+		padding: 1rem;
+		width: 33.333%;
+
+		.case-small-img{
+			width: 25vw;
+			height: 25vw;
+
+			.case-heading{
+				line-height: 25vw;
+			}
+
+		}
+
+	}
+
+}
+
+@media (min-width: $screen-lg-min) {}
+
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+EMPLOYEE
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+.employee-container{
+	padding: 2rem;
+
+	.employee-img{
+		width: 15rem;
+		height: 15rem;
+		border-radius: 100rem;
+		background-size: cover;
+		background-position: center;
+		margin: 2rem auto;
+	}
+
+	.employee-name{
+		font-weight: 700;
+	}
+
+}
+
+.employee-name,
+.employee-work,
+.employee-tele,
+.employee-mail{
+	text-align: center;
+}

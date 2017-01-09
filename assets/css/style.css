@@ -1,0 +1,429 @@
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+COLOR
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+FOUNDATION SETTINGS
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+body {
+  margin: 0;
+  padding: 0; }
+  body .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; }
+    body .container .row {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1600px; }
+
+.section {
+  width: 100%; }
+
+@media (min-width: 992px) {
+  #about-text {
+    max-width: 785px;
+    float: right; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+TEXT
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #252122; }
+
+body p,
+body a,
+body li,
+body ul,
+body ol,
+body div,
+body span,
+body i {
+  font-family: 'Open Sans', sans-serif;
+  color: #252122; }
+
+body h1,
+body .h1-heading-frontp {
+  font-size: 5rem; }
+
+body h2 {
+  font-size: 3rem; }
+
+body h3 {
+  font-size: 2rem; }
+
+body h4 {
+  font-size: 1.7rem; }
+
+body p,
+body a,
+body li,
+body ul,
+body ol,
+body div,
+body span,
+body i {
+  font-size: 1.5rem; }
+
+.h2-underline-container {
+  width: 100%;
+  margin-bottom: 2.5rem; }
+  .h2-underline-container .h2-underline {
+    width: 4rem;
+    border-bottom: 0.5rem solid #65c087; }
+
+@media (min-width: 768px) {
+  body h1,
+  body .h1-heading-frontp {
+    font-size: 7rem; }
+  body h2 {
+    font-size: 3.5rem; }
+  body h3 {
+    font-size: 2.5rem; }
+  body h4 {
+    font-size: 1.9rem; }
+  body p,
+  body a,
+  body li,
+  body ul,
+  body ol,
+  body div,
+  body span,
+  body i {
+    font-size: 1.6rem; } }
+
+@media (min-width: 992px) {
+  body h1,
+  body .h1-heading-frontp {
+    font-size: 8rem; }
+  body h2 {
+    font-size: 4rem; }
+  body h3 {
+    font-size: 3rem; }
+  body h4 {
+    font-size: 2rem; }
+  body p,
+  body a,
+  body li,
+  body ul,
+  body ol,
+  body div,
+  body span,
+  body i {
+    font-size: 1.65rem; } }
+
+@media (min-width: 1200px) {
+  body h1,
+  body .h1-heading-frontp {
+    font-size: 10rem; }
+  body h2 {
+    font-size: 5rem; }
+  body h3 {
+    font-size: 4rem; }
+  body h4 {
+    font-size: 3rem; }
+  body p,
+  body a,
+  body li,
+  body ul,
+  body ol,
+  body div,
+  body span,
+  body i {
+    font-size: 1.7rem; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+BUTTONS
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.btn-cover {
+  width: 100%;
+  text-align: center;
+  margin: 6rem 0;
+  clear: both; }
+
+.btn-round {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 50rem;
+  border: 0.2rem #65c087 solid;
+  background-color: #65c087; }
+
+.btn-round:hover {
+  background-color: #00a850;
+  border: 0.2rem #00a850 solid;
+  color: #fff;
+  text-decoration: none; }
+
+.btn-round:visited,
+.btn-round:focus {
+  color: #fff;
+  text-decoration: none; }
+
+#btn-case {
+  float: left;
+  margin-bottom: 11rem; }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+TOP-MENU
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.top-header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999; }
+  .top-header nav .navbar {
+    margin-bottom: 0;
+    border: none;
+    height: auto; }
+    .top-header nav .navbar .logo-link .logo-img {
+      width: auto;
+      height: 5.5rem;
+      margin: 0.5rem; }
+  .top-header nav .navbar_small .logo-link .logo-img {
+    width: auto;
+    height: 5.5rem;
+    margin: 0.5rem; }
+
+.menu-primary-menu-container {
+  display: none;
+  height: 100vh; }
+  .menu-primary-menu-container ul li {
+    text-align: center; }
+    .menu-primary-menu-container ul li a {
+      text-transform: uppercase;
+      font-weight: 700; }
+    .menu-primary-menu-container ul li a:active,
+    .menu-primary-menu-container ul li a:visited {
+      background-color: #fff;
+      color: #252122; }
+    .menu-primary-menu-container ul li a:hover {
+      background-color: #fff;
+      color: #00a850; }
+
+.logo-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block; }
+
+#toggle-mobile-menu {
+  position: fixed;
+  width: 100%;
+  z-index: 99999; }
+  #toggle-mobile-menu .mobilemenu-bars i {
+    color: #65c087;
+    font-family: FontAwesome;
+    padding: 1rem;
+    font-size: 5rem;
+    float: right; }
+  #toggle-mobile-menu .mobilemenu-bars i:hover {
+    color: #00a850;
+    cursor: pointer; }
+
+@media (min-width: 768px) {
+  .menu-primary-menu-container {
+    display: block;
+    height: auto;
+    float: right; }
+    .menu-primary-menu-container ul li {
+      padding: 1rem; }
+      .menu-primary-menu-container ul li a {
+        font-size: 1.4rem; }
+  #toggle-mobile-menu {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  .menu-primary-menu-container ul li a {
+    font-size: 1.6rem; }
+  #toggle-mobile-menu {
+    display: none; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+FRONT-PAGE
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.header-frontp,
+#case-frontp,
+#about-frontp,
+#map,
+#contactform-frontp {
+  float: left; }
+
+.header-frontp {
+  background-color: #8d8e92;
+  background-size: cover;
+  margin-top: 6.5rem;
+  width: 100%;
+  height: auto; }
+  .header-frontp .row .header-container {
+    padding: 2rem; }
+    .header-frontp .row .header-container .h1-heading-frontp,
+    .header-frontp .row .header-container p {
+      color: #fff;
+      text-align: center; }
+
+.h1-heading-frontp {
+  padding: 4rem 1.5rem 1.5rem 1.5rem; }
+
+.section-container {
+  padding: 3rem;
+  clear: both; }
+
+.section-bread {
+  padding-bottom: 2rem; }
+
+#case-frontp {
+  width: 100%;
+  height: auto; }
+
+#about-frontp {
+  width: 100%;
+  height: auto;
+  background-color: #efefef; }
+  #about-frontp .about-frontp-divided {
+    float: left;
+    width: 100%; }
+  #about-frontp #about-img-frontpage {
+    background-image: url("http://www.twitrcovers.com/wp-content/uploads/2012/09/Cute-Cat.jpg");
+    height: 250px;
+    background-size: cover;
+    background-position: center top; }
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: #8d8e92; }
+
+@media (min-width: 768px) {
+  .header-frontp .row .header-container {
+    padding: 5rem; }
+  .section-container {
+    text-align: center; }
+    .section-container .h2-underline-container .h2-underline {
+      margin: 0 auto; }
+  .section-container {
+    padding: 5rem; }
+  #about-frontp #about-img-frontpage {
+    height: 400px; } }
+
+@media (min-width: 992px) {
+  .header-frontp .row .header-container {
+    padding: 7rem; }
+  #about-frontp .about-frontp-divided {
+    width: 50%; }
+  #about-frontp #about-img-frontpage {
+    height: 550px; }
+  #about-frontp .about-frontp-divided .section-container {
+    text-align: right; }
+    #about-frontp .about-frontp-divided .section-container .h2-underline-container .h2-underline {
+      margin-right: 0; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+CASE 
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.case-container {
+  padding: 1rem;
+  width: 100%;
+  float: left; }
+  .case-container .case-small-img {
+    width: 70vw;
+    height: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; }
+    .case-container .case-small-img .case-heading {
+      color: #fff;
+      font-size: 130%;
+      font-weight: 700;
+      text-align: center;
+      line-height: 70vw;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0.3); }
+    .case-container .case-small-img .case-heading:hover {
+      background-color: rgba(0, 168, 80, 0.5); }
+
+.case-container:last-child {
+  float: none;
+  clear: both;
+  border: 2px solid yellow; }
+
+@media (min-width: 768px) {
+  .case-container {
+    padding: 2rem;
+    width: 50%; }
+    .case-container .case-small-img {
+      width: 40vw;
+      height: 40vw; }
+      .case-container .case-small-img .case-heading {
+        line-height: 40vw; } }
+
+@media (min-width: 992px) {
+  .case-container {
+    padding: 1rem;
+    width: 33.333%; }
+    .case-container .case-small-img {
+      width: 25vw;
+      height: 25vw; }
+      .case-container .case-small-img .case-heading {
+        line-height: 25vw; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+EMPLOYEE
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.employee-container {
+  padding: 2rem; }
+  .employee-container .employee-img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100rem;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem auto; }
+  .employee-container .employee-name {
+    font-weight: 700; }
+
+.employee-name,
+.employee-work,
+.employee-tele,
+.employee-mail {
+  text-align: center; }
