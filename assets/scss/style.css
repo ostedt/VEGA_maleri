@@ -31,7 +31,6 @@ body {
   #about-text {
     max-width: 785px;
     float: right; } }
-
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -48,7 +47,6 @@ body h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #252122; }
-
 body p,
 body a,
 body li,
@@ -63,16 +61,12 @@ body i {
 body h1,
 body .h1-heading-frontp {
   font-size: 5rem; }
-
 body h2 {
   font-size: 3rem; }
-
 body h3 {
   font-size: 2rem; }
-
 body h4 {
   font-size: 1.7rem; }
-
 body p,
 body a,
 body li,
@@ -109,7 +103,6 @@ body i {
   body span,
   body i {
     font-size: 1.6rem; } }
-
 @media (min-width: 992px) {
   body h1,
   body .h1-heading-frontp {
@@ -129,7 +122,6 @@ body i {
   body span,
   body i {
     font-size: 1.65rem; } }
-
 @media (min-width: 1200px) {
   body h1,
   body .h1-heading-frontp {
@@ -149,7 +141,6 @@ body i {
   body span,
   body i {
     font-size: 1.7rem; } }
-
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -160,12 +151,6 @@ BUTTONS
 .btn-cover {
   width: 100%;
   text-align: center;
-  margin: 6rem 0;
-  clear: both; }
-
-.btn-cover-right {
-  width: 100%;
-  text-align: right;
   margin: 6rem 0;
   clear: both; }
 
@@ -192,9 +177,6 @@ BUTTONS
 #btn-case {
   float: left;
   margin-bottom: 11rem; }
-
-#btn-case-nomargin {
-  float: left; }
 
 /**********************************************************
 ***********************************************************
@@ -265,15 +247,15 @@ TOP-MENU
       padding: 1rem; }
       .menu-primary-menu-container ul li a {
         font-size: 1.4rem; }
+
   #toggle-mobile-menu {
     display: none; } }
-
 @media (min-width: 1200px) {
   .menu-primary-menu-container ul li a {
     font-size: 1.6rem; }
+
   #toggle-mobile-menu {
     display: none; } }
-
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -336,18 +318,21 @@ FRONT-PAGE
 @media (min-width: 768px) {
   .header-frontp .row .header-container {
     padding: 5rem; }
+
   .section-container {
     text-align: center; }
     .section-container .h2-underline-container .h2-underline {
       margin: 0 auto; }
+
   .section-container {
     padding: 5rem; }
+
   #about-frontp #about-img-frontpage {
     height: 400px; } }
-
 @media (min-width: 992px) {
   .header-frontp .row .header-container {
     padding: 7rem; }
+
   #about-frontp .about-frontp-divided {
     width: 50%; }
   #about-frontp #about-img-frontpage {
@@ -356,7 +341,6 @@ FRONT-PAGE
     text-align: right; }
     #about-frontp .about-frontp-divided .section-container .h2-underline-container .h2-underline {
       margin-right: 0; } }
-
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -401,7 +385,6 @@ CASE
       height: 40vw; }
       .case-container .case-small-img .case-heading {
         line-height: 40vw; } }
-
 @media (min-width: 992px) {
   .case-container {
     padding: 1rem;
@@ -411,7 +394,6 @@ CASE
       height: 25vw; }
       .case-container .case-small-img .case-heading {
         line-height: 25vw; } }
-
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -436,3 +418,5 @@ EMPLOYEE
 .employee-tele,
 .employee-mail {
   text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

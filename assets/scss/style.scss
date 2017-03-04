@@ -21,6 +21,8 @@ $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
 
+
+
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -259,6 +261,13 @@ BUTTONS
 	clear: both;
 }
 
+.btn-cover-right{
+	width: 100%;
+	text-align: right;
+	margin: 6rem 0;
+	clear: both;
+}
+
 .btn-round{
 	text-transform: uppercase;
 	color: $white;
@@ -285,6 +294,10 @@ BUTTONS
 #btn-case{
 	float: left;
 	margin-bottom: 11rem;
+}
+
+#btn-case-nomargin{
+	float: left;
 }
 
 /**********************************************************

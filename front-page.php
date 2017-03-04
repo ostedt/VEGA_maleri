@@ -80,6 +80,12 @@
             <?php the_field('about-breadtext'); ?>
           <?php endif; ?>
 
+          <?php if( get_field('about-btn-text') ): ?>
+            <div id="btn-case-nomargin" class="btn-cover-right">
+              <a class="btn-round" href="<?php the_field('about-btn-link'); ?>"><?php the_field('about-btn-text'); ?></a>
+            </div>
+          <?php endif; ?>
+
       <?php endif; ?>
 
       </div>
