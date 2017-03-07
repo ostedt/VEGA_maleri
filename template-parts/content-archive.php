@@ -17,7 +17,7 @@
             <div class="archive-img" style="background-image: url('<?php echo $thumbnail; ?>')"></div>
 
             <?php the_title( '<h3>', '</h3>'); ?>
-                <?php /*the_excerpt(); */?>
+                <?php the_excerpt(); ?>
                     
 
 
