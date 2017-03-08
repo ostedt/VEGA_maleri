@@ -6,7 +6,7 @@ function VEGA_setup() {
     add_theme_support( 'post-thumbnails' );
     register_nav_menus( array(
         'primary'   => __( 'Primary Menu' ),
-        'footer'    => __( 'Footer Menu')
+        'medarbetare'    => __( 'Medarbetare Menu')
     ) );
     
 }
