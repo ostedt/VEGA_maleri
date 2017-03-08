@@ -67,4 +67,24 @@
 	</div>
 <?php endif; ?>
 
+<?php if( get_field('part4_about_heading') ) :?>
+	<div id="part4" class="about-page-section">
+
+		  <?php if( get_field('part4_about_img') ): ?>
+		  	<div id="" class="" style="background-image: url('<?php echo the_field("part4_about_img"); ?>')"></div>
+		  <?php endif; ?>
+
+		<div>
+		    <h2><?php the_field('part4_about_heading'); ?></h2>
+		    <div class="h2-underline-container">
+		    	<div class="h2-underline"></div>
+		    </div>
+		    
+		  <?php if( get_field('part4_about_breadtext') ) : ?>
+		    <?php the_field('part4_about_breadtext'); ?>
+		  <?php endif; ?>
+		</div>
+	</div>
+<?php endif; ?>
+
 <?php get_footer(); ?>
