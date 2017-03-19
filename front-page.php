@@ -64,7 +64,10 @@
 
   <div id="about-frontp" class="section">
   	
-  	<div id="about-text-frontp" class="about-frontp-divided">
+  	
+  	<div id="about-img-frontpage" class="about-frontp-divided" style="background-image: url('<?php echo the_field("about-img"); ?>')"></div>
+
+    <div id="about-text-frontp" class="about-frontp-divided">
 
     
 
@@ -80,12 +83,6 @@
             <?php the_field('about-breadtext'); ?>
           <?php endif; ?>
 
-          <?php if( get_field('about-btn-text') ): ?>
-            <div id="btn-case-nomargin" class="btn-cover-right">
-              <a class="btn-round" href="<?php the_field('about-btn-link'); ?>"><?php the_field('about-btn-text'); ?></a>
-            </div>
-          <?php endif; ?>
-
       <?php endif; ?>
 
       </div>
@@ -93,7 +90,6 @@
       </div>
 
     </div>
-  	<div id="about-img-frontpage" class="about-frontp-divided" style="background-image: url('<?php echo the_field("about-img"); ?>')"></div>
 
   </div>
 

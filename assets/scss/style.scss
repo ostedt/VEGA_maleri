@@ -56,7 +56,7 @@ body{
 
 	#about-text{
 		max-width: 785px;
-		float: right;
+		float: left;
 	}
 
 }
@@ -619,12 +619,12 @@ FRONT-PAGE
 		.about-frontp-divided{
 			
 			.section-container{
-				text-align: right;
+				text-align: left;
 
 				.h2-underline-container{
 			
 					.h2-underline{
-						margin-right: 0;
+						margin-left: 0;
 					}
 
 				}

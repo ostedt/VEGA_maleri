@@ -30,7 +30,7 @@ body {
 @media (min-width: 992px) {
   #about-text {
     max-width: 785px;
-    float: right; } }
+    float: left; } }
 
 /**********************************************************
 ***********************************************************
@@ -353,9 +353,9 @@ FRONT-PAGE
   #about-frontp #about-img-frontpage {
     height: 550px; }
   #about-frontp .about-frontp-divided .section-container {
-    text-align: right; }
+    text-align: left; }
     #about-frontp .about-frontp-divided .section-container .h2-underline-container .h2-underline {
-      margin-right: 0; } }
+      margin-left: 0; } }
 
 /**********************************************************
 ***********************************************************
