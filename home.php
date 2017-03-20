@@ -1,6 +1,8 @@
 <?php get_header(); ?>
     
-    <h1 class="">Medarbetare</h1>
+     <h1 class="">Medarbetare</h1>
+            <div class="h2-underline-container">
+            <div class="h2-underline"></div>
 
 
     <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare' ) ); ?>
