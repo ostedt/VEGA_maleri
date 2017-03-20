@@ -390,11 +390,6 @@ CASE
     .case-container .case-small-img .case-heading:hover {
       background-color: rgba(0, 168, 80, 0.5); }
 
-.case-container:last-child {
-  float: none;
-  clear: both;
-  border: 2px solid yellow; }
-
 @media (min-width: 768px) {
   .case-container {
     padding: 2rem;
