@@ -5,6 +5,8 @@
 ?>
 
 <?php get_header(); ?>
+<div class="container">
+    <div class="row">
 
 <?php if( get_field('part1_about_heading') ) :?>
 	<div id="part1" class="about-page-section">
@@ -86,5 +88,8 @@
 		</div>
 	</div>
 <?php endif; ?>
+
+</div>
+</div>
 
 <?php get_footer(); ?>
