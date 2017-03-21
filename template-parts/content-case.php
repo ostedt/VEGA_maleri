@@ -1,4 +1,4 @@
-<div class="case-container">
+<a href="<?php echo esc_url( get_permalink()); ?>"><div class="case-container">
 	
 	<?php if( get_field('case_small_img') ) : ?>
         <div id="" class="case-small-img" style="background-image: url('<?php echo the_field("case_small_img"); ?>')">
@@ -12,4 +12,4 @@
         </div>
     <?php endif; ?>
 
-</div>
+</div></a>
