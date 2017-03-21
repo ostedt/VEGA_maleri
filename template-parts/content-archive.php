@@ -1,4 +1,5 @@
-<div class="content">
+
+        <div class="content">
    
     <?php $post_image_id = get_post_thumbnail_id($post_to_use->ID);
     
@@ -24,4 +25,4 @@
             </div>
     </a>
     
-</div>
+
