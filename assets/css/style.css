@@ -53,6 +53,9 @@ GENERAL SETTINGS
   .subpage-header h1 {
     color: #fff; }
 
+.subpage-block-color-grey {
+  background-color: #efefef; }
+
 @media (min-width: 768px) {
   .subpage-header {
     padding: 15rem 0; } }

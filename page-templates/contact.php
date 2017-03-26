@@ -30,6 +30,31 @@
         <?php VEGA_get_latest_employees(); ?>
 
     </div>
+
+    <?php if( get_field('contact_offert_heading') ) :?>
+        <div class="subpage-header subpage-block-color-grey col-xs-12 about-page-section">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <h1><?php the_field('contact_offert_heading'); ?></h1>
+                
+              <?php if( get_field('contact_offert_breadtext') ) : ?>
+                <?php the_field('contact_offert_breadtext'); ?>
+              <?php endif; ?>
+
+            </div>
+
+            <div class="col-xs-12">
+
+              <?php if( get_field('contact_offert_form') ) : ?>
+                <?php the_field('contact_offert_form'); ?>
+              <?php endif; ?>
+
+            </div>
+
+        </div>
+    <?php endif; ?>
+
 </div>
 
 <div id="map" class="section"></div>

@@ -30,7 +30,7 @@
 
     	<div class="row">
 
-            <?php VEGA_get_latest_cases(); ?>
+            <?php VEGA_get_all_cases(); ?>
 
         </div>
         

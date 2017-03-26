@@ -163,6 +163,35 @@ function VEGA_get_latest_cases() {
     endif; 
 } 
 
+function VEGA_get_all_cases() {
+    
+    global $paged;
+    
+    $posts = new WP_Query( array(
+        'post_type' => 'VEGA_cases',
+        'posts_per_page' => -1,
+        'order_by' => 'date',
+    ) );
+    
+    if ( $posts->have_posts() ) :
+    
+        while ( $posts->have_posts() ) : $posts->the_post(); 
+            
+        get_template_part('template-parts/content', 'case');
+    
+        endwhile;
+    
+    ?>
+        
+    <?php wp_reset_postdata(); 
+             
+    else:
+        
+        echo 'Det finns inga referensobjekt';
+        
+    endif; 
+} 
+
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
