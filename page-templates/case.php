@@ -7,21 +7,35 @@
 ?>
 
 <?php get_header(); ?>
+
+<div class="container">
+
+     <div class="subpage-header" style="background-image: url('<?php the_field("ref-header-img"); ?>');">
+
+     <div class="row">
+
+          <?php if( get_field('ref-header-heading') ): ?>
+              <h1><?php the_field('ref-header-heading'); ?></h1>
+
+                        <?php if( get_field('ref-header-text') ): ?>
+                            <?php the_field('ref-header-text'); ?>
+                        <?php endif; ?>
+          <?php endif; ?>
+
+        </div>
+
+    </div>
     
     <?php while ( have_posts() ) : the_post(); ?>
 
-    	<div class="container">
     	<div class="row">
 
-        <h1 class=""><?php the_title(); ?></h1>
-			<div class="h2-underline-container">
-		    <div class="h2-underline"></div>
-        
-        <?php VEGA_get_latest_cases(); ?>
+            <?php VEGA_get_latest_cases(); ?>
 
-        </div>
         </div>
         
     <?php endwhile; ?>
+
+</div>
 
 <?php get_footer(); ?>

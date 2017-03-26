@@ -6,10 +6,26 @@
 
 <?php get_header(); ?>
 <div class="container">
+
+     <div class="subpage-header" style="background-image: url('<?php the_field("contact_img_top"); ?>');">
+
+     <div class="row">
+
+          <?php if( get_field('contact_heading_top') ): ?>
+              <h1><?php the_field('contact_heading_top'); ?></h1>
+
+                        <?php if( get_field('contact_breadtext_top') ): ?>
+                            <?php the_field('contact_breadtext_top'); ?>
+                        <?php endif; ?>
+          <?php endif; ?>
+
+        </div>
+
+    </div>
+
+
+
     <div class="row">
-         <h1 class=""><?php the_title(); ?></h1>
-                    <div class="h2-underline-container">
-                    <div class="h2-underline"></div>
 
         <?php VEGA_get_latest_employees(); ?>
 

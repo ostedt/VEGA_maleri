@@ -3,9 +3,13 @@
 		<head>
 
 			<meta charset="utf-8">
+
+			<!-- Adding jQuery -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-			<link rel="stylesheet" href="wp-content/themes/VEGA/fonts/css/font-awesome.min.css">
+
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- Adding font from googlefonts -->
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
 
 			<?php wp_head(); ?>
@@ -19,22 +23,21 @@
 
 				<nav>
 					<div class="row">
-					<div class="navbar" id="navbar-collapse">
 
-						<!-- if img choosen in customizer (admin) we get the img and the link otherwiae nothing-->
-						<?php if ( $my_image = get_theme_mod( 'vega_general_image')) : ?>
+						<div class="navbar" id="navbar-collapse">
 
-							<a href="<?php echo home_url(); ?>" class="logo-link">
+							<!-- if img choosen in customizer (admin) we get the img and the link otherwiae nothing-->
+							<?php if ( $my_image = get_theme_mod( 'vega_general_image')) : ?>
+						
+								<a href="<?php echo home_url(); ?>" class="logo-link">
+										<img class="logo-img" src="<?php echo $my_image ?>">
+								</a>
 
-									<img class="logo-img" src="<?php echo $my_image ?>">
+							<?php endif; ?>
 
-							</a>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav navbar-right' ) ); ?>
 
-						<?php endif; ?>
-
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav navbar-right' ) ); ?>
-
-					</div>
+						</div>
 
 					</div>
 
@@ -57,45 +60,4 @@
 			</div>
 
 
-		<script>
-			
-			$("#toggle-icon").click(function(){
-			    $(".menu-primary-menu-container").toggle();
-			});
-
-
-				$(document).ready(function(){
-					$("a").on('click', function(event) {
-
-						if (this.hash !== "") {
-
-							event.preventDefault();
-							var hash = this.hash;
-
-							$('html, body').animate({
-								scrollTop: $(hash).offset().top -100
-							}, 500, function(){
-
-								window.location.hash = hash;
-
-							});
-						} 
-					});
-				});
-
-
-				$(function() {
-				    //caches a jQuery object containing the header element
-				    var header = $(".navbar");
-				    $(window).scroll(function() {
-				        var scroll = $(window).scrollTop();
-
-				        if (scroll >= 150) {
-				            header.removeClass('navbar').addClass("navbar_small");
-				        } else {
-				            header.removeClass("navbar_small").addClass('navbar');
-				        }
-				    });
-				});
-
-		</script>
+		

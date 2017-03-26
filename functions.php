@@ -26,7 +26,7 @@ function VEGA_get_latest_posts() {
     
     $posts = new WP_Query( array(
         'post_type' => 'post',
-        'posts_per_page' => 4,
+        'posts_per_page' => -1,
         'order_by' => 'date',
     ) );
     
@@ -81,7 +81,8 @@ add_action( 'init', 'VEGA_get_employees' );
 function VEGA_get_latest_employees() {
     
     $posts = new WP_Query( array(
-        'post_type' => 'VEGA_employees'
+        'post_type' => 'VEGA_employees',
+        'posts_per_page' => -1
     ) );
     
     if ( $posts->have_posts() ) :

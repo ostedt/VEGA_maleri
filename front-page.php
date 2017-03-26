@@ -2,22 +2,26 @@
 
 <div class="container">
 
+  <!-- Adding header-img -->
   <div style="background-image: url('<?php echo the_field("header-img"); ?>')" class="header-frontp">
 
     <div class="row">
 
       <div class="header-container">
 
+          <!-- Adding header text -->
           <?php if( get_field('header-heading') ): ?>
             <h1 class="h1-heading-frontp"><?php the_field('header-heading'); ?></h1>  
           <?php endif; ?>
 
+          <!-- Adding small text under header-->
           <?php if( get_field('header-breadtext') ): ?>
             <div class="section-bread">
               <?php the_field('header-breadtext'); ?>
             </div>
           <?php endif; ?>
-
+          
+          <!-- Add buttontext and button -->
           <?php if( get_field('header-btn-text') ): ?>
             <div class="btn-cover">
               <a class="btn-round" href="<?php the_field('header-btn-link'); ?>"><?php the_field('header-btn-text'); ?></a>
@@ -36,10 +40,12 @@
 
       <div class="section-container">
 
+        <!-- Adding heading for case -->
         <?php if( get_field('case-heading') ) :?>
         <h2><?php the_field('case-heading'); ?></h2>
         <div class="h2-underline-container"><div class="h2-underline"></div></div>
           
+          <!-- adding breadtext for case section -->
           <?php if( get_field('case-breadtext') ) : ?>
             <div class="section-bread">
               <?php the_field('case-breadtext'); ?>
@@ -48,8 +54,10 @@
 
         <?php endif; ?>
       	
+        <!-- get the 3 latest cases(referensobjekt) -->
       	<?php VEGA_get_latest_cases(); ?>
 
+        <!-- Adding buttontext and button to see more cases-->
           <?php if( get_field('case-btn-text') ): ?>
             <div id="btn-case" class="btn-cover">
               <a class="btn-round" href="<?php the_field('case-btn-link'); ?>"><?php the_field('case-btn-text'); ?></a>
@@ -64,40 +72,39 @@
 
   <div id="about-frontp" class="section">
   	
-  	
-  	<div id="about-img-frontpage" class="about-frontp-divided" style="background-image: url('<?php echo the_field("about-img"); ?>')"></div>
+    <!-- About section adding img -->
+    <div id="about-img-frontpage" class="about-frontp-divided" style="background-image: url('<?php echo the_field("about-img"); ?>')"></div>
 
-    <div id="about-text-frontp" class="about-frontp-divided">
+      <div id="about-text-frontp" class="about-frontp-divided">
 
-    
+        <div class="row">
 
-    <div class="row">
+          <div id="about-text" class="section-container">
+       
+            <!-- adding header about section -->
+            <?php if( get_field('about-heading') ) :?>
+              <h2><?php the_field('about-heading'); ?></h2>
+              <div class="h2-underline-container"><div class="h2-underline"></div></div>
+                
+                <!-- adding breadtext to about -->
+                <?php if( get_field('about-breadtext') ) : ?>
+                  <?php the_field('about-breadtext'); ?>
+                <?php endif; ?>
 
-    <div id="about-text" class="section-container">
-     
-      <?php if( get_field('about-heading') ) :?>
-        <h2><?php the_field('about-heading'); ?></h2>
-        <div class="h2-underline-container"><div class="h2-underline"></div></div>
-          
-          <?php if( get_field('about-breadtext') ) : ?>
-            <?php the_field('about-breadtext'); ?>
-          <?php endif; ?>
+            <?php endif; ?>
 
-      <?php endif; ?>
+          </div>
+
+        </div>
 
       </div>
-
-      </div>
-
-    </div>
 
   </div>
 
   <div id="contactform-frontp" class="section">
   	
-  	<!-- content-contectform.php ska in här -->
     <div class="row">
-
+      
       <div class="section-container col-xs-12">
       <?php if( get_field('contact-heading') ) :?>
         <h2><?php the_field('contact-heading'); ?></h2>
@@ -108,7 +115,8 @@
           <?php endif; ?>
 
       <?php endif; ?>
-
+      
+      <!-- adding all employees -->
       <?php VEGA_get_latest_employees(); ?>
 
       </div>
