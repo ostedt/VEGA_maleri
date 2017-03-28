@@ -2,7 +2,10 @@
 
 <div class="container">
 
-<?php if( get_field('emp_header_heading') ) :?>
+<?php
+if ( is_user_logged_in() ){
+
+    if( get_field('emp_header_heading') ) :?>
     <?php if( get_field('emp_header_img') ): ?>
         <div class="subpage-header col-xs-12 about-page-section" style="background-image: url('<?php echo the_field("emp_header_img"); ?>')">
             <div class="row">
@@ -38,6 +41,17 @@
             ?>
 
     </div>
+<?php
+   
+}else{ ?>
+    
+    <div class="row">
+        
+    <h2>För att nå medarbetarsidan måste du logga in!</h2>
+
+    </div>
+ 
+    <?php } ?>
 </div>
 
 <?php get_footer(); ?>
