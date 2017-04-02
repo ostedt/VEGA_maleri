@@ -163,6 +163,8 @@ function VEGA_get_latest_cases() {
     endif; 
 } 
 
+/* Function to get all cases */
+
 function VEGA_get_all_cases() {
     
     global $paged;
@@ -201,7 +203,7 @@ SUPPLIERS
 **********************************************************/
 
 /* Below, adding suppliers as a post-type */
-
+/*
 function VEGA_get_suppliers(){
 
 	register_post_type('VEGA_suppliers', array(
@@ -219,10 +221,10 @@ function VEGA_get_suppliers(){
 	));
 
 }
-add_action( 'init', 'VEGA_get_suppliers' );
+add_action( 'init', 'VEGA_get_suppliers' ); */
 
 /* Fuction to get the latest suppliers */
-
+/*
 function VEGA_get_latest_suppliers() {
     
     $posts = new WP_Query( array(
@@ -245,6 +247,32 @@ function VEGA_get_latest_suppliers() {
         
     endif;
 }
+*/
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+EXCERPT
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+// functions taken from: https://developer.wordpress.org/reference/functions/the_excerpt/ and changed to VEGA's needs
+
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( ' Läs mer', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 10;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 
 /**********************************************************
 ***********************************************************
@@ -253,8 +281,6 @@ ENQUEUE
 -----------------------------------------------------------
 ***********************************************************
 **********************************************************/
-
-/* Below, adding employers as a post-type */
 
 //Laddar in scripts (css och js)
 function VEGA_enqueue_scripts() {
@@ -292,6 +318,7 @@ function VEGA_init() {
     ));
 }
 add_action( 'widgets_init', 'VEGA_init' );
+require 'inc/widgets/init.php';
 
 /**********************************************************
 ***********************************************************

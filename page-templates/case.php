@@ -10,6 +10,8 @@
 
 <div class="container">
 
+    <!-- Adding header with img and text -->
+
      <div class="subpage-header" style="background-image: url('<?php the_field("ref-header-img"); ?>');">
 
      <div class="row">
@@ -26,6 +28,8 @@
 
     </div>
     
+    <!-- Adding cases to page, if there is some -->
+
     <?php while ( have_posts() ) : the_post(); ?>
 
     	<div class="row">

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
+<!-- Adding content to 404.php and guide user back to home-page -->
+
 <div class="container">
     <div class="row">
-
-    	<div class="" style="background-image: url('');"></div>
 
     	<h1>Oups, nu har något gått snett!</h1>
 

@@ -6,12 +6,9 @@
 
 <?php get_header(); ?>
 
-
-
-
 <div class="container">
 
-<!-- add section one - about page with img-->
+<!-- add section one in ACF - about page with img-->
 
 	<?php if( get_field('part1_about_heading') ) :?>
 		<?php if( get_field('part1_about_img') ): ?>
@@ -31,8 +28,7 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
-
-<!-- add section one - about page no img-->
+<!-- add section two in ACF - about page no img-->
 
 	<?php if( get_field('part2_about_heading') ) :?>
 		<div class="subpage-header subpage-block-color-grey col-xs-12 about-page-section">
@@ -50,7 +46,7 @@
 		</div>
 	<?php endif; ?>
 
-<!-- add section one - about page with img-->
+<!-- add section three in ACF - about page with img-->
 
 	<?php if( get_field('part3_about_heading') ) :?>
 		<?php if( get_field('part3_about_img') ): ?>
@@ -70,7 +66,7 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<!-- add section one - about page no img-->
+	<!-- add section four in ACF - about page no img-->
 
 	<?php if( get_field('part4_about_heading') ) :?>
 		<div class="subpage-header subpage-block-color-grey col-xs-12 about-page-section">

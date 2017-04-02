@@ -1,9 +1,3 @@
-<?php 
-/*
-* Template Name: Medarbetar-undersida
-*/
-?>
-
 <?php get_header(); ?>
 
 	<div class="container">
@@ -32,36 +26,31 @@
 
 		    <div class="row">
 
+
 		    <!-- if user is logged in show content from ACF -->
 		    <div class="col-xs-12 col-md-8">
 
+<h1><?php the_archive_title(); ?></h1>
+		 		
 
-		 		<?php if( get_field('mu_title') ): ?>
-		              <h2><?php the_field('mu_title'); ?></h2>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-		                <?php if( get_field('mu_content') ): ?>
-		                    <?php the_field('mu_content'); ?>
-		                <?php endif; ?>
+                <?php get_template_part( 'template-parts/content', 'archive' ); ?>
 
-		                <?php if( get_field ('mu_files') ): ?>
-		                	<?php the_field('mu_files'); ?>
-		                <?php endif; ?> 
-
-		                <?php if( get_field ('mu_files2') ): ?>
-		                	<?php the_field('mu_files2'); ?>
-		                <?php endif; ?> 
-
-		                <?php if( get_field ('mu_files3') ): ?>
-		                	<?php the_field('mu_files3'); ?>
-		                <?php endif; ?> 
-		                    
-		          <?php endif; ?>
-		      
+            <?php endwhile; ?>
+            
+            <?php 
+                the_posts_pagination( array(
+                    'prev_text' => 'Föregående',
+                    'next_text' => 'Nästa'
+                ));
+            ?>
 		    	
 		    </div>
 
                 <div class="sidebar-medarbetare col-xs-12 col-md-4">
-                 <button onclick="goBack()">Tillbaka till föregående sida</button>
+                
+		    <button onclick="goBack()">Tillbaka till föregående sida</button>
 
 			<script>
 			function goBack() {
@@ -93,5 +82,7 @@
 	    <?php } ?>
 
 	</div>
+
+<?php get_footer(); ?>
 
 <?php get_footer(); ?>

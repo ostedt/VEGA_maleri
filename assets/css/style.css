@@ -268,13 +268,14 @@ TOP-MENU
     .menu-primary-menu-container ul li a {
       text-transform: uppercase;
       font-weight: 700; }
-    .menu-primary-menu-container ul li a:active,
     .menu-primary-menu-container ul li a:visited {
       background-color: #fff;
       color: #252122; }
     .menu-primary-menu-container ul li a:hover {
       background-color: #fff;
       color: #00a850; }
+  .menu-primary-menu-container ul li.current-menu-item a {
+    color: #00a850; }
 
 .logo-img {
   background-size: contain;
@@ -426,6 +427,12 @@ CASE
     .case-container .case-small-img .case-heading:hover {
       background-color: rgba(0, 168, 80, 0.5); }
 
+.carousel-img {
+  width: 100%;
+  height: 50vh;
+  background-position: center;
+  background-size: cover; }
+
 @media (min-width: 768px) {
   .case-container {
     padding: 2rem;
@@ -434,7 +441,9 @@ CASE
       width: 40vw;
       height: 40vw; }
       .case-container .case-small-img .case-heading {
-        line-height: 40vw; } }
+        line-height: 40vw; }
+  .carousel-img {
+    height: 70vh; } }
 
 @media (min-width: 992px) {
   .case-container {
@@ -444,7 +453,9 @@ CASE
       width: 25vw;
       height: 25vw; }
       .case-container .case-small-img .case-heading {
-        line-height: 25vw; } }
+        line-height: 25vw; }
+  .carousel-img {
+    height: 90vh; } }
 
 /**********************************************************
 ***********************************************************

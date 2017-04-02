@@ -444,7 +444,6 @@ TOP-MENU
                 	font-weight: 700;
                 }
 
-                a:active,
                 a:visited{
                 	background-color: $white;
                 	color: $black;
@@ -456,7 +455,14 @@ TOP-MENU
                 }
 
               }
+               li.current-menu-item {
+
+            	a{
+					color: $M_primary;
+				}
+			}
             }
+
           } 
 
 .logo-img{
@@ -738,6 +744,13 @@ CASE
 
 }
 
+.carousel-img {
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
 
 @media (min-width: $screen-sm-min) {
 
@@ -757,7 +770,9 @@ CASE
 
 	}
 
-
+	.carousel-img {
+	    height: 70vh;
+	}
 
 }
 
@@ -777,6 +792,10 @@ CASE
 
 		}
 
+	}
+
+	.carousel-img {
+	    height: 90vh;
 	}
 
 }

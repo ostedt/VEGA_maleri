@@ -1,3 +1,5 @@
+<!-- Get employee content from custom post and ACF -->
+
 <div class="employee-container col-xs-12 col-sm-6 col-md-4 col-lg-3">
 	
 	<?php if( get_field('employee_img') ) : ?>

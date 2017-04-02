@@ -1,3 +1,5 @@
+<!-- Get archive view for cases, getting small img from ACF and heading -->
+
 <a href="<?php echo esc_url( get_permalink()); ?>"><div class="case-container">
 	
 	<?php if( get_field('case_small_img') ) : ?>

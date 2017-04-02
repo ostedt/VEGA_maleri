@@ -7,6 +7,8 @@
 <?php get_header(); ?>
 <div class="container">
 
+    <!-- Adding header with img and text -->
+
      <div class="subpage-header" style="background-image: url('<?php the_field("contact_img_top"); ?>');">
 
      <div class="row">
@@ -14,22 +16,29 @@
           <?php if( get_field('contact_heading_top') ): ?>
               <h1><?php the_field('contact_heading_top'); ?></h1>
 
-                        <?php if( get_field('contact_breadtext_top') ): ?>
-                            <?php the_field('contact_breadtext_top'); ?>
-                        <?php endif; ?>
+                    <?php if( get_field('contact_breadtext_top') ): ?>
+                        <?php the_field('contact_breadtext_top'); ?>
+                    <?php endif; ?>
+                    
           <?php endif; ?>
 
         </div>
 
     </div>
 
+    <!-- IF there is employees, show em all -->
 
+    <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="row">
+        <div class="row">
 
-        <?php VEGA_get_latest_employees(); ?>
+            <?php VEGA_get_latest_employees(); ?>
 
-    </div>
+        </div>
+
+    <?php endwhile; ?>
+
+    <!-- Section containing offert from ninjaforms + heading and text -->
 
     <?php if( get_field('contact_offert_heading') ) :?>
         <div class="subpage-header subpage-block-color-grey col-xs-12 about-page-section">
@@ -56,6 +65,8 @@
     <?php endif; ?>
 
 </div>
+
+<!-- Adding map from google -->
 
 <div id="map" class="section"></div>
 

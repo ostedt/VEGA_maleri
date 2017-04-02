@@ -53,9 +53,18 @@
           <?php endif; ?>
 
         <?php endif; ?>
-      	
-        <!-- get the 3 latest cases(referensobjekt) -->
-      	<?php VEGA_get_latest_cases(); ?>
+      
+        <!-- IF there is cases, show three latest -->
+
+        <?php while ( have_posts() ) : the_post(); ?>
+
+            <div class="row">
+
+                <?php VEGA_get_latest_cases(); ?>
+
+            </div>
+
+        <?php endwhile; ?>
 
         <!-- Adding buttontext and button to see more cases-->
           <?php if( get_field('case-btn-text') ): ?>
@@ -116,14 +125,25 @@
 
       <?php endif; ?>
       
-      <!-- adding all employees -->
-      <?php VEGA_get_latest_employees(); ?>
+        <!-- IF there is employees, show em all -->
+
+        <?php while ( have_posts() ) : the_post(); ?>
+
+            <div class="row">
+
+                <?php VEGA_get_latest_employees(); ?>
+
+            </div>
+
+        <?php endwhile; ?>
 
       </div>
 
     </div>
 
   </div>
+
+  <!-- Adding googlemaps map -->
 
   <div id="map" class="section"></div>
 

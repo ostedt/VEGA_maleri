@@ -11,13 +11,15 @@
 
 			<!-- Adding font from googlefonts -->
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
+			<style> @import "font-awesome-4.7.0"; </style>
 
 			<?php wp_head(); ?>
 
 		</head>
 
 		<body>
-
+			
+			<!-- Get primarymenu -->
 
 			<div class="top-header container">
 
