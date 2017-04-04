@@ -18,7 +18,7 @@ $white: #fff;
 $screen-xs-min: 0px;
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
-$screen-lg-min: 1200px;
+$screen-lg-min: 1400px;
 
 
 
@@ -50,7 +50,7 @@ body{
 		.row{
 			margin-right: auto;
 			margin-left: auto;
-			max-width: 1600px;
+			max-width: 1500px;
 		}
 	}
 }
@@ -326,7 +326,9 @@ BUTTONS
 	margin: 6rem 0;
 	clear: both;
 }
-
+.field-wrap input[type="submit"], 
+.field-wrap input[type="button"], 
+.field-wrap button,
 .btn-round{
 	text-transform: uppercase;
 	color: $white;
@@ -336,7 +338,9 @@ BUTTONS
     border: 0.2rem $M_second solid;
     background-color: $M_second;
 }
-
+.field-wrap input[type="submit"]:hover, 
+.field-wrap input[type="button"]:hover, 
+.field-wrap button:hover,
 .btn-round:hover{
 	background-color: $M_primary;
 	border: 0.2rem $M_primary solid;
@@ -344,6 +348,12 @@ BUTTONS
 	text-decoration: none;
 }
 
+.field-wrap input[type="submit"]:visited, 
+.field-wrap input[type="button"]:visited, 
+.field-wrap button:visited,
+.field-wrap input[type="submit"]:focus, 
+.field-wrap input[type="button"]:focus, 
+.field-wrap button:focus,
 .btn-round:visited,
 .btn-round:focus{
 	color:$white;
@@ -367,177 +377,99 @@ TOP-MENU
 ***********************************************************
 **********************************************************/
 
-.top-header{
-	position: fixed;
-	width: 100%;
-	background-color: $white;
-	z-index: 9999;
 
-    nav{
 
-      .navbar {
-      	margin-bottom: 0;
-      	border: none;
-      	height: auto;
+@media (max-width: $screen-md-min) {
 
-        .logo-link{
-
-			.logo-img{
-				width: auto;
-				height: 5.5rem;
-				margin: 0.5rem;
-			}
-        }
-
-        .menu-primary-menu-container{
-
-          ul{
-
-            li{
-
-                a{
-
-                }
-              }
-            }
-          } 
-        }
-
-      .navbar_small {
-
-        .logo-link{
-
-			.logo-img{
-				width: auto;
-				height: 5.5rem;
-				margin: 0.5rem;
-			}
-        }
-
-        .menu-primary-menu-container{
-
-          ul{
-
-            li{
-
-                a{
-
-                }
-              }
-            }
-          } 
-        }
-      }
-    } 
-
-     .menu-primary-menu-container{
-			display: none;
-			height: 100vh;
-
-          ul{
-
-            li{
-            	text-align: center;
-
-                a{
-                	text-transform: uppercase;
-                	font-weight: 700;
-                }
-
-                a:visited{
-                	background-color: $white;
-                	color: $black;
-                }
-
-                a:hover{
-                	background-color: $white;
-                	color: $M_primary;
-                }
-
-              }
-               li.current-menu-item {
-
-            	a{
-					color: $M_primary;
+ .navbar{
+	.container-fluid{
+		.navbar-header{
+			float: none;
+			.navbar-toggle{
+				display: block;
+				.icon-bar{
+					
 				}
 			}
-            }
-
-          } 
-
-.logo-img{
-	background-size: contain;
-	background-repeat: no-repeat;
-	display: inline-block;
- }
-
- #toggle-mobile-menu{
- 	position: fixed;
-	width: 100%;
-	z-index: 99999;
-
-	.mobilemenu-bars{
-
-		 i{
-		 	color: $M_second;
-		 	font-family: FontAwesome;
-		 	padding: 1rem;
-		 	font-size: 5rem;
-		 	float: right;
-		 }
-
-		 i:hover{
-		 	color: $M_primary;
-		 	cursor: pointer;
-		 }
+			.logo-link{
+				.logo-img{
+					
+				}
+			}
+		}
+		.navbar-collapse.collapse{
+			display: none !important;
+			
 	}
+	.navbar-collapse.collapse.in{
+        display:block !important;
+        ul{
+        	float: none !important;
+				li{
+					float: none !important;
+					a{
+						
+					}
+				}
+			}
+		}
+    }
+}
 }
 
-@media (min-width: $screen-sm-min) {
+.navbar{
+	background-color: $white;
+	margin-bottom: 0px;
+	height: 70px;
+	.container-fluid{
+		.navbar-header{
+			.navbar-toggle{
+				.icon-bar{
+					background-color: $M_second;
+					width: 30px;
+				    height: 4px;
+				    margin: 5px 0px;
+				}
+			}
+			.navbar-toggle:focus, 
+			.navbar-toggle:hover{
+				background-color: $light-gray;
+			}
+			.logo-link{
+				.logo-img{
+					padding: 5px 15px;
+					height: 70px;
+				}
+			}
+		}
+		.navbar-collapse{
+			background-color: $white;
+			ul{
+				li{
+					padding: 1rem;
+					a{
+						text-transform: uppercase;
+						color: $black;
+						font-weight: 600;
+					}
 
- .menu-primary-menu-container{
-			display: block;
-			height: auto;
-			float: right;
-
-          ul{
-
-            li{
-            	padding: 1rem;
-
-                a{
-                	font-size: 1.4rem;
-                }
-              }
-            }
-          } 
-
-  #toggle-mobile-menu{
-  	display: none;
-  }
-
-
+					a:hover{
+						color: $M_second;
+					}
+				}
+				li.current-menu-item{
+					a{
+						color: $M_second;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-lg-min) {
 
- .menu-primary-menu-container{
-
-          ul{
-
-            li{
-
-                a{
-                	font-size: 1.6rem;
-                }
-              }
-            }
-          } 
-
-  #toggle-mobile-menu{
-  	display: none;
-  }
-
+ 
 
 }
 
@@ -834,6 +766,62 @@ EMPLOYEE
 .employee-tele,
 .employee-mail{
 	text-align: center;
+}
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+CONTACT
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+body .wp-list-table{
+	width: 100%;
+
+	 td{
+	 	padding: 0rem;
+	 }
+
+	 textarea, input{
+	 	padding: 1rem;
+	 }
+
+	 .nf-field-element{
+	 	
+	 	ul{
+	 		float: left;
+
+	 		input{
+	 			float: left;
+	 		}
+
+	 		label{
+	 			float: left;
+	 		}
+	 	}
+	 }
+}
+
+@media (min-width: $screen-md-min) {
+
+	body .wp-list-table{
+
+		 td{
+		 	padding: 0 6rem;
+		 }
+	}
+
+}
+
+@media (min-width: $screen-lg-min) {
+
+	body .wp-list-table{
+
+		 td{
+		 	padding: 0 7rem;
+		 }
+	}
 }
 
 /**********************************************************

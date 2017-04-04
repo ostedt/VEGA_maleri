@@ -13,7 +13,7 @@ class MY_Widget extends WP_Widget {
         $icon = isset( $instance['icon'] ) ? $instance['icon'] : null;
         ?>
 
-            <div class="my-widget">
+            <div class="my-widget col-xs-12 col-md-4">
                 <?php if ( $icon ) : ?>
                      <i class="fa <?php echo $icon ?>" aria-hidden="true"></i>
                 <?php endif; ?>

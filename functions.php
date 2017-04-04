@@ -15,6 +15,29 @@ add_action( 'after_setup_theme', 'VEGA_setup' );
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
+LOGIN/LOGOUT
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+
+// Used: http://wordpress.stackexchange.com/questions/15633/how-can-i-redirect-user-after-entering-wrong-password
+
+function custom_login_failed( $username )
+{
+    $referrer = wp_get_referer();
+
+    if ( $referrer && ! strstr($referrer, 'wp-login') && ! strstr($referrer,'wp-admin') )
+    {
+        wp_redirect( add_query_arg('login', 'failed', $referrer) );
+        exit;
+    }
+}
+
+add_action( 'wp_login_failed', 'custom_login_failed' );
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
 POST
 -----------------------------------------------------------
 ***********************************************************
@@ -197,61 +220,6 @@ function VEGA_get_all_cases() {
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
-SUPPLIERS
------------------------------------------------------------
-***********************************************************
-**********************************************************/
-
-/* Below, adding suppliers as a post-type */
-/*
-function VEGA_get_suppliers(){
-
-	register_post_type('VEGA_suppliers', array(
-		'labels' => array(
-			'name' => __( 'Leverantörer' ),
-			'singular_name' => __( 'Leverantörer' )
-		),
-		'public' => true,
-		'supports' => array(
-			'thumbnail',
-			'title',
-			'editor',
-			'custom-fields',
-		)
-	));
-
-}
-add_action( 'init', 'VEGA_get_suppliers' ); */
-
-/* Fuction to get the latest suppliers */
-/*
-function VEGA_get_latest_suppliers() {
-    
-    $posts = new WP_Query( array(
-        'post_type' => 'VEGA_suppliers'
-    ) );
-    
-    if ( $posts->have_posts() ) :
-    
-        while ( $posts->have_posts() ) : $posts->the_post(); 
-
-        	get_template_part('template-parts/content', 'suppliers');
-              
-        endwhile;
-    
-    wp_reset_postdata();
-         
-    else:
-        
-        echo 'Det finns inga leverantörer';
-        
-    endif;
-}
-*/
-
-/**********************************************************
-***********************************************************
------------------------------------------------------------
 EXCERPT
 -----------------------------------------------------------
 ***********************************************************
@@ -311,10 +279,10 @@ function VEGA_init() {
     register_sidebar( array(
         'name'              => __( 'Footer' ), //--() innebär att det inom paranteserna är översättningsbart
         'id'                => 'footer-menu', //detta är ett id där av är det inget __()...
-        'before_widget'     => '<div class="col-md-4">', //Detta är en slags div...
+        'before_widget'     => '<div class="col-md-12">', //Detta är en slags div...
         'after_widget'      => '</div>',
-        'before_title'      => '<h3 class="widget-title">',
-        'after_title'       => '</h3>'
+        'before_title'      => '',
+        'after_title'       => ''
     ));
 }
 add_action( 'widgets_init', 'VEGA_init' );

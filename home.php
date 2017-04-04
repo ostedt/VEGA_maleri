@@ -53,7 +53,7 @@
 
                 <div class="sidebar-medarbetare col-xs-12 col-md-4">
                   <!-- Get menu "Medarbetar"-menu with pages connected to employees -->
-                <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare') ); ?>
 
                 <li id="archives"><?php _e('Nyhetsarkiv'); ?>
                      <ul>
@@ -69,9 +69,15 @@
     
     <!-- If user is not logged in, show content below -->
 
-    <div class="row">
-        
+    <div class="row" style="padding-top:100px">
+
     <h2>För att nå medarbetarsidan måste du logga in!</h2>
+    <?php wp_login_form(array(
+        'label_username' => __( 'Användarnamn' ),
+        'label_password' => __( 'Lösenord' ),
+        'label_remember' => __( 'Kom ihåg mig' ),
+        'label_log_in'   => __( 'Logga in' ),
+        )); ?>
 
     </div>
  
