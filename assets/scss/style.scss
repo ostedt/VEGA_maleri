@@ -378,45 +378,6 @@ TOP-MENU
 **********************************************************/
 
 
-
-@media (max-width: $screen-md-min) {
-
- .navbar{
-	.container-fluid{
-		.navbar-header{
-			float: none;
-			.navbar-toggle{
-				display: block;
-				.icon-bar{
-					
-				}
-			}
-			.logo-link{
-				.logo-img{
-					
-				}
-			}
-		}
-		.navbar-collapse.collapse{
-			display: none !important;
-			
-	}
-	.navbar-collapse.collapse.in{
-        display:block !important;
-        ul{
-        	float: none !important;
-				li{
-					float: none !important;
-					a{
-						
-					}
-				}
-			}
-		}
-    }
-}
-}
-
 .navbar{
 	background-color: $white;
 	margin-bottom: 0px;
@@ -444,6 +405,7 @@ TOP-MENU
 		}
 		.navbar-collapse{
 			background-color: $white;
+
 			ul{
 				li{
 					padding: 1rem;
@@ -466,6 +428,85 @@ TOP-MENU
 		}
 	}
 }
+
+
+@media (max-width: $screen-md-min) {
+
+ .navbar,
+ .navbar-fixed-top{
+ 	top: 0;
+        border-width: 0 0 1px;
+	.container-fluid{
+		.navbar-header{
+			float: none;
+			.navbar-toggle{
+				 display: block;
+				.icon-bar{
+					
+				}
+			}
+			.logo-link{
+				.logo-img{
+					
+				}
+			}
+		}
+		.navbar-collapse{
+			border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+            position: fixed;
+            overflow: hidden;
+    width: 100%;
+		}
+		.navbar-collapse.collapse{
+			display: none!important;
+			
+	}
+	.navbar-collapse.collapse.in{
+        display:block !important;
+        ul{
+        margin-top: 7.5px;
+        	float: none !important;
+				li{
+					float: none !important;
+					a{
+						
+					}
+				}
+			}
+			 .navbar-nav>li {
+		        float: none;
+		    }
+		    .navbar-nav>li>a {
+		        padding-top: 10px;
+		        padding-bottom: 10px;
+		    }
+		       .navbar-nav .open .dropdown-menu {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
+		}
+    }
+}
+}
+
+@media (min-width: $screen-sm-min) {
+
+ .navbar,
+ .navbar-fixed-top{
+
+	.container-fluid{
+
+		.navbar-collapse{
+			left: 0;
+			}}}}
+
 
 @media (min-width: $screen-lg-min) {
 
