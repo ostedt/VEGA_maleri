@@ -531,9 +531,20 @@ FRONT-PAGE
 }
 
 #about-frontp{
-	width: 100%; 
-	height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 	background-color: $light-gray;
+
+.inner {
+  overflow: auto;
+  display: flex;
+  word-wrap: break-word;
+  background-color: $light-gray;
+  width: 100%;
+  min-height: 300px;
+  padding: 4rem;
+}
 
 	.about-frontp-divided{
 		float: left; 
@@ -609,6 +620,11 @@ FRONT-PAGE
 			width: 50%;
 		}
 
+		.inner {
+		  width: 50%;
+		  padding: 8rem;
+		}
+
 		#about-img-frontpage{
 			height: 550px;
 
@@ -635,7 +651,17 @@ FRONT-PAGE
 
 }
 
-@media (min-width: $screen-lg-min) {  }
+@media (min-width: $screen-lg-min) { 
+
+	#about-frontp{
+
+		.inner {
+		  padding: 10rem;
+		}
+
+	}
+
+ }
 
 /**********************************************************
 ***********************************************************
@@ -649,6 +675,7 @@ CASE
 	padding: 1rem;
 	width: 100%;
 	float: left;
+	overflow: hidden;
 
 	.case-small-img{
 		width: 70vw;

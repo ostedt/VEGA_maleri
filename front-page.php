@@ -79,19 +79,13 @@
 
   </div>
 
-  <div id="about-frontp" class="section">
-  	
-    <!-- About section adding img -->
-    <div id="about-img-frontpage" class="about-frontp-divided" style="background-image: url('<?php echo the_field("about-img"); ?>')"></div>
+<body>
+<div id="about-frontp" class="container section">
+<div class="inner" style="background-image: url('<?php echo the_field("about-img"); ?>'); background-size: cover; background-position: center;"></div>
 
-      <div id="about-text-frontp" class="about-frontp-divided">
-
-        <div class="row">
-
-          <div id="about-text" class="section-container">
-       
-            <!-- adding header about section -->
-            <?php if( get_field('about-heading') ) :?>
+  <div class="inner">
+  <div class="inner-about-text">
+    <?php if( get_field('about-heading') ) :?>
               <h2><?php the_field('about-heading'); ?></h2>
               <div class="h2-underline-container"><div class="h2-underline"></div></div>
                 
@@ -101,14 +95,12 @@
                 <?php endif; ?>
 
             <?php endif; ?>
-
-          </div>
-
-        </div>
-
-      </div>
-
+            </div>
   </div>
+  
+  
+</div>
+
 
    
 
