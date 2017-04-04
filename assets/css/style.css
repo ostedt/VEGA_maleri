@@ -204,6 +204,7 @@ BUTTONS
   margin: 6rem 0;
   clear: both; }
 
+input[type="submit"],
 .field-wrap input[type="submit"],
 .field-wrap input[type="button"],
 .field-wrap button,
@@ -216,6 +217,7 @@ BUTTONS
   border: 0.2rem #65c087 solid;
   background-color: #65c087; }
 
+input[type="submit"]:hover,
 .field-wrap input[type="submit"]:hover,
 .field-wrap input[type="button"]:hover,
 .field-wrap button:hover,
@@ -225,9 +227,11 @@ BUTTONS
   color: #fff;
   text-decoration: none; }
 
+input[type="submit"]:visited,
 .field-wrap input[type="submit"]:visited,
 .field-wrap input[type="button"]:visited,
 .field-wrap button:visited,
+input[type="submit"]:focus,
 .field-wrap input[type="submit"]:focus,
 .field-wrap input[type="button"]:focus,
 .field-wrap button:focus,
@@ -545,6 +549,56 @@ body .wp-list-table {
 @media (min-width: 1400px) {
   body .wp-list-table td {
     padding: 0 7rem; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+MEMBER-PAGE
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.container-member-notlogedin {
+  background-color: #efefef; }
+
+.login-member-text {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 5rem 1rem; }
+
+.login-member-form {
+  padding-bottom: 5rem; }
+  .login-member-form form {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px #bbb; }
+    .login-member-form form p label {
+      width: 100%;
+      text-transform: uppercase; }
+    .login-member-form form p input[type=text],
+    .login-member-form form p input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .login-member-form form .login-submit {
+      width: 100%;
+      text-align: center; }
+      .login-member-form form .login-submit input[type=submit] {
+        width: 100%; }
+
+@media (min-width: 992px) {
+  .login-member-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 1rem 10rem 1rem; }
+  .login-member-form {
+    padding-bottom: 10rem; } }
 
 /**********************************************************
 ***********************************************************
