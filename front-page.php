@@ -80,7 +80,7 @@
   </div>
 
 <body>
-<div id="about-frontp" class="container section">
+<div class="about-frontp container section">
 <div class="inner" style="background-image: url('<?php echo the_field("about-img"); ?>'); background-size: cover; background-position: center;"></div>
 
   <div class="inner">

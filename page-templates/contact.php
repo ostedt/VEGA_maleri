@@ -9,22 +9,35 @@
 
     <!-- Adding header with img and text -->
 
-     <div class="subpage-header" style="background-image: url('<?php the_field("contact_img_top"); ?>');">
-
-     <div class="row">
-
+      <div style="background-image: url('<?php echo the_field("contact_img_top"); ?>')" class="header-frontp">
+    <div class="row">
+      <div class="header-container">
+          <!-- Adding header text -->
           <?php if( get_field('contact_heading_top') ): ?>
-              <h1><?php the_field('contact_heading_top'); ?></h1>
+            <h1 class="h1-heading-frontp"><?php the_field('contact_heading_top'); ?></h1>  
+          <?php endif; ?>
 
-                    <?php if( get_field('contact_breadtext_top') ): ?>
-                        <?php the_field('contact_breadtext_top'); ?>
-                    <?php endif; ?>
-                    
+          <!-- Adding small text under header-->
+          <?php if( get_field('contact_breadtext_top') ): ?>
+            <div class="section-bread">
+              <?php the_field('contact_breadtext_top'); ?>
+            </div>
+          <?php endif; ?>
+          
+          <!-- Add buttontext and button -->
+          <?php if( get_field('header-btn-text') ): ?>
+            <div class="btn-cover">
+              <a class="btn-round" href="<?php the_field('header-btn-link'); ?>"><?php the_field('header-btn-text'); ?>hej</a>
+            </div>
           <?php endif; ?>
 
         </div>
 
     </div>
+    
+  </div>
+
+    
 
     <!-- IF there is employees, show em all -->
 

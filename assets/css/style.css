@@ -47,7 +47,7 @@ GENERAL SETTINGS
 **********************************************************/
 .subpage-header {
   width: 100%;
-  padding: 10rem 0;
+  padding: 5rem 0;
   text-transform: capitalize;
   float: left;
   text-align: center;
@@ -61,15 +61,11 @@ GENERAL SETTINGS
 
 @media (min-width: 768px) {
   .subpage-header {
-    padding: 15rem 0; } }
+    padding: 7rem 0; } }
 
 @media (min-width: 992px) {
   .subpage-header {
-    padding: 20rem 0; } }
-
-@media (min-width: 1400px) {
-  .subpage-header {
-    padding: 25rem 0; } }
+    padding: 10rem 0; } }
 
 /**********************************************************
 ***********************************************************
@@ -345,7 +341,7 @@ FRONT-PAGE
 **********************************************************/
 .header-frontp,
 #case-frontp,
-#about-frontp,
+.about-frontp,
 #map,
 #contactform-frontp {
   float: left; }
@@ -353,7 +349,6 @@ FRONT-PAGE
 .header-frontp {
   background-color: #8d8e92;
   background-size: cover;
-  margin-top: 6.5rem;
   width: 100%;
   height: auto; }
   .header-frontp .row .header-container {
@@ -377,12 +372,12 @@ FRONT-PAGE
   width: 100%;
   height: auto; }
 
-#about-frontp {
+.about-frontp {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   background-color: #efefef; }
-  #about-frontp .inner {
+  .about-frontp .inner {
     overflow: auto;
     display: flex;
     word-wrap: break-word;
@@ -390,10 +385,10 @@ FRONT-PAGE
     width: 100%;
     min-height: 300px;
     padding: 4rem; }
-  #about-frontp .about-frontp-divided {
+  .about-frontp .about-frontp-divided {
     float: left;
     width: 100%; }
-  #about-frontp #about-img-frontpage {
+  .about-frontp #about-img-frontpage {
     background-image: url("http://www.twitrcovers.com/wp-content/uploads/2012/09/Cute-Cat.jpg");
     height: 250px;
     background-size: cover;
@@ -413,26 +408,28 @@ FRONT-PAGE
       margin: 0 auto; }
   .section-container {
     padding: 5rem; }
-  #about-frontp #about-img-frontpage {
+  .about-frontp .inner {
+    min-height: 400px; }
+  .about-frontp #about-img-frontpage {
     height: 400px; } }
 
 @media (min-width: 992px) {
   .header-frontp .row .header-container {
     padding: 7rem; }
-  #about-frontp .about-frontp-divided {
+  .about-frontp .about-frontp-divided {
     width: 50%; }
-  #about-frontp .inner {
+  .about-frontp .inner {
     width: 50%;
     padding: 8rem; }
-  #about-frontp #about-img-frontpage {
+  .about-frontp #about-img-frontpage {
     height: 550px; }
-  #about-frontp .about-frontp-divided .section-container {
+  .about-frontp .about-frontp-divided .section-container {
     text-align: left; }
-    #about-frontp .about-frontp-divided .section-container .h2-underline-container .h2-underline {
+    .about-frontp .about-frontp-divided .section-container .h2-underline-container .h2-underline {
       margin-left: 0; } }
 
 @media (min-width: 1400px) {
-  #about-frontp .inner {
+  .about-frontp .inner {
     padding: 10rem; } }
 
 /**********************************************************

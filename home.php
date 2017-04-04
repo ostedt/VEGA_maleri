@@ -10,23 +10,33 @@
 
     /* If user is logged in, show content from ACF if it is used*/ 
 
-    if( get_field('emp_header_heading', 11) ) :?>
-    <?php if( get_field('emp_header_img', 11) ): ?>
-        <div class="subpage-header col-xs-12 about-page-section" style="background-image: url('<?php echo the_field("emp_header_img", 11); ?>')">
-            <div class="row">
+      ?><div style="background-image: url('<?php echo the_field('emp_header_img', 11); ?>')" class="header-frontp">
+    <div class="row">
+      <div class="header-container">
+          <!-- Adding header text -->
+          <?php if( get_field('emp_header_heading', 11) ): ?>
+            <h1 class="h1-heading-frontp"><?php the_field('emp_header_heading', 11); ?></h1>  
+          <?php endif; ?>
 
-                <div class="col-xs-12 col-md-8">
-                    <h1><?php the_field('emp_header_heading', 11); ?></h1>
-                
-                    <?php if( get_field('emp_header_breadtext', 11) ) : ?>
-                        <?php the_field('emp_header_breadtext', 11); ?>
-                    <?php endif; ?>
-                </div>
+          <!-- Adding small text under header-->
+          <?php if( get_field('emp_header_breadtext', 11) ): ?>
+            <div class="section-bread">
+              <?php the_field('emp_header_breadtext', 11); ?>
             </div>
+          <?php endif; ?>
+          
+          <!-- Add buttontext and button -->
+          <?php if( get_field('header-btn-text') ): ?>
+            <div class="btn-cover">
+              <a class="btn-round" href="<?php the_field('header-btn-link'); ?>"><?php the_field('header-btn-text'); ?>hej</a>
+            </div>
+          <?php endif; ?>
 
         </div>
-        <?php endif; ?>
-    <?php endif; ?>
+
+    </div>
+    
+  </div>
 
     <div class="row">
 
