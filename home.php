@@ -22,15 +22,8 @@
 
           <!-- Adding small text under header-->
           <?php if( get_field('emp_header_breadtext', 11) ): ?>
-            <div class="section-bread">
+            <div class="section-bread section-bread-no-btn">
               <?php the_field('emp_header_breadtext', 11); ?>
-            </div>
-          <?php endif; ?>
-          
-          <!-- Add buttontext and button -->
-          <?php if( get_field('header-btn-text') ): ?>
-            <div class="btn-cover">
-              <a class="btn-round" href="<?php the_field('header-btn-link'); ?>"><?php the_field('header-btn-text'); ?>hej</a>
             </div>
           <?php endif; ?>
 

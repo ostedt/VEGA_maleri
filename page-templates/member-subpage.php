@@ -19,10 +19,11 @@
 
                 <div class="col-xs-12 col-md-8">
                     <h1><?php the_field('emp_header_heading', 11); ?></h1>
-                
+                <div class="section-bread section-bread-no-btn">
                     <?php if( get_field('emp_header_breadtext', 11) ) : ?>
                         <?php the_field('emp_header_breadtext', 11); ?>
                     <?php endif; ?>
+                    </div>
                 </div>
             </div>
 
