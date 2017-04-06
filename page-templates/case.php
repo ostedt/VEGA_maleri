@@ -39,9 +39,9 @@
     <?php while ( have_posts() ) : the_post(); ?>
 
     	<div class="row">
-
+          <div class="case-archive-container">
             <?php VEGA_get_all_cases(); ?>
-
+          </div>
         </div>
         
     <?php endwhile; ?>

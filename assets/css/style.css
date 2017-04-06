@@ -123,6 +123,9 @@ body span,
 body i {
   font-size: 1.5rem; }
 
+.long-heading {
+  word-break: break-word; }
+
 .h2-underline-container {
   width: 100%;
   margin-bottom: 2.5rem; }
@@ -251,6 +254,11 @@ input[type="submit"]:focus,
 
 #btn-case-nomargin {
   float: left; }
+
+.btn-content-centered {
+  width: 100%;
+  text-align: center;
+  padding-top: 5rem; }
 
 /**********************************************************
 ***********************************************************
@@ -458,6 +466,17 @@ CASE
 -----------------------------------------------------------
 ***********************************************************
 **********************************************************/
+.case-archive-container {
+  float: left;
+  padding: 5rem 0; }
+
+body .single-container-content {
+  float: left;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem; }
+
 .case-container {
   padding: 1rem;
   width: 100%;
@@ -512,6 +531,10 @@ CASE
   .carousel-img {
     height: 90vh; } }
 
+@media (min-width: 1400px) {
+  .case-archive-container {
+    padding: 10rem 0; } }
+
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
@@ -552,18 +575,49 @@ body .wp-list-table {
     padding: 1rem; }
   body .wp-list-table .nf-field-element ul {
     float: left; }
-    body .wp-list-table .nf-field-element ul input {
-      float: left; }
     body .wp-list-table .nf-field-element ul label {
       float: left; }
+  body .wp-list-table .nf-field-element input[type=text],
+  body .wp-list-table .nf-field-element input[type=email],
+  body .wp-list-table .nf-field-element textarea {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  body .wp-list-table .nf-field-container {
+    width: 100%; }
+
+.employee-page-container {
+  padding: 3rem;
+  float: left; }
 
 @media (min-width: 992px) {
   body .wp-list-table td {
-    padding: 0 6rem; } }
+    padding: 0 6rem; }
+  .employee-page-container {
+    padding: 6rem 4rem; } }
 
 @media (min-width: 1400px) {
   body .wp-list-table td {
     padding: 0 7rem; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+ABOUT
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.about-big {
+  display: none; }
+
+@media (min-width: 992px) {
+  .about-small {
+    display: none; }
+  .about-big {
+    display: flex; } }
 
 /**********************************************************
 ***********************************************************

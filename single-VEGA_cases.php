@@ -22,7 +22,7 @@
         <div class="carousel-img" style="background-image: url('<?php the_field("case_big_img"); ?>')">
           <div class="carousel-caption">
              <?php if( get_field('heading_case1') ): ?>
-              <h1 class=""><?php the_field('heading_case1'); ?></h1>  
+              <h2 class=""><?php the_field('heading_case1'); ?></h2>  
             <?php endif; ?>
             <?php if( get_field('text_case1') ): ?>
               <?php the_field('text_case1'); ?> 
@@ -76,25 +76,19 @@
 
     <!-- get ACF fields thats filled with content-->
 
-    <?php if( get_field('case_breadtext') ): ?>
-     <div class="col-xs-12 col-md-8">
+     <div class="col-xs-12 col-md-8 col-md-offset-2 single-container-content">
+     <h1 class=""><?php the_field('heading_case1'); ?></h1>  
         <p><?php the_field('case_breadtext'); ?></p>
-      </div>
-    <?php endif; ?>
-
-
-
-<div class="col-xs-12 col-md-4">
-
-      <button onclick="goBack()">Tillbaka till föregående sida</button>
-
-      <script>
-      function goBack() {
-          window.history.back();
-      }
-      </script>
-
+<div class="btn-content-centered">
+      <button class="btn-round" onclick="goBack()">Tillbaka till föregående sida</button>
 </div>
+        <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script>
+
+      </div>
 
     </div>
     

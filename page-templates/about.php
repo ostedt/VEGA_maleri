@@ -33,7 +33,28 @@
 
 <!-- add section one in ACF - about page with img-->
 
-<div class="about-frontp container section">
+<div class="about-frontp container section about-small">
+<div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+
+  <div class="inner">
+  <div class="inner-about-text">
+    <?php if( get_field('part1_about_heading') ) :?>
+              <h2><?php the_field('part1_about_heading'); ?></h2>
+              <div class="h2-underline-container"><div class="h2-underline"></div></div>
+                
+                <!-- adding breadtext to about -->
+                <?php if( get_field('part1_about_breadtext') ) : ?>
+                  <?php the_field('part1_about_breadtext'); ?>
+                <?php endif; ?>
+
+            <?php endif; ?>
+            </div>
+  </div>
+  
+  
+</div>
+
+<div class="about-frontp container section about-big">
 <div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
 
   <div class="inner">
@@ -57,7 +78,7 @@
 
 <!-- add section two in ACF - about page no img-->
 
-<div class="about-frontp container section">
+<div class="about-frontp container section about-small">
 <div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
 
   <div class="inner">
@@ -77,11 +98,50 @@
   
   
 </div>
+<div class="about-frontp container section about-big">
 
+  <div class="inner">
+  <div class="inner-about-text">
+    <?php if( get_field('part2_about_heading') ) :?>
+              <h2><?php the_field('part2_about_heading'); ?></h2>
+              <div class="h2-underline-container"><div class="h2-underline"></div></div>
+                
+                <!-- adding breadtext to about -->
+                <?php if( get_field('part2_about_breadtext') ) : ?>
+                  <?php the_field('part2_about_breadtext'); ?>
+                <?php endif; ?>
+
+            <?php endif; ?>
+            </div>
+  </div>
+  <div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+  
+</div>
 	
 <!-- add section three in ACF - about page with img-->
 
-<div class="about-frontp container section">
+<div class="about-frontp container section about-small">
+<div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+
+  <div class="inner">
+  <div class="inner-about-text">
+    <?php if( get_field('part3_about_heading') ) :?>
+              <h2><?php the_field('part3_about_heading'); ?></h2>
+              <div class="h2-underline-container"><div class="h2-underline"></div></div>
+                
+                <!-- adding breadtext to about -->
+                <?php if( get_field('part3_about_breadtext') ) : ?>
+                  <?php the_field('part3_about_breadtext'); ?>
+                <?php endif; ?>
+
+            <?php endif; ?>
+            </div>
+  </div>
+  
+  
+</div>
+
+<div class="about-frontp container section about-big">
 <div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
 
   <div class="inner">
@@ -105,7 +165,7 @@
 	
 	<!-- add section four in ACF - about page no img-->
 
-<div class="about-frontp container section">
+<div class="about-frontp container section about-small">
 <div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
 
   <div class="inner">
@@ -125,6 +185,29 @@
   
   
 </div>
+
+</div>
+
+<div class="about-frontp container section about-big">
+
+  <div class="inner">
+  <div class="inner-about-text">
+    <?php if( get_field('part4_about_heading') ) :?>
+              <h2><?php the_field('part4_about_heading'); ?></h2>
+              <div class="h2-underline-container"><div class="h2-underline"></div></div>
+                
+                <!-- adding breadtext to about -->
+                <?php if( get_field('part4_about_breadtext') ) : ?>
+                  <?php the_field('part4_about_breadtext'); ?>
+                <?php endif; ?>
+
+            <?php endif; ?>
+            </div>
+  </div>
+  <div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+  
+</div>
+
 
 </div>
 

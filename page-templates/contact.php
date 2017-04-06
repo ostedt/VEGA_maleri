@@ -37,9 +37,10 @@
     <?php while ( have_posts() ) : the_post(); ?>
 
         <div class="row">
+        <div class="employee-page-container">
 
             <?php VEGA_get_latest_employees(); ?>
-
+        </div>
         </div>
 
     <?php endwhile; ?>
@@ -51,7 +52,7 @@
         <div class="row">
 
             <div class="col-xs-12">
-                <h1><?php the_field('contact_offert_heading'); ?></h1>
+                <h1 class="long-heading"><?php the_field('contact_offert_heading'); ?></h1>
                 
               <?php if( get_field('contact_offert_breadtext') ) : ?>
                 <?php the_field('contact_offert_breadtext'); ?>
