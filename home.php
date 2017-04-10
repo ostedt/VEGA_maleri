@@ -57,6 +57,11 @@
 
 
                 <div class="sidebar-medarbetare col-xs-12 col-md-4">
+
+                <div class="sidebar-container">
+
+                <h4>Medarbetarmeny</h4>
+                 <div class="h2-underline-container"><div class="h2-underline"></div></div>
                   <!-- Get menu "Medarbetar"-menu with pages connected to employees -->
                 <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare') ); ?>
 
@@ -65,7 +70,8 @@
                         <?php wp_get_archives('type=monthly'); ?>
                      </ul>
                 </li>
-                                
+                        
+                        </div>        
             </div>
         </div></div>
 <?php
@@ -76,7 +82,8 @@
 <div class="container container-member-notlogedin">
     <div class="row" style="padding-top:100px">
     
-    <h2 class="login-member-text">För att nå medarbetarsidan måste du logga in!</h2>
+    <h2 class="login-member-text">Logga in för att nå medarbetarsidan!</h2>
+
     <div class="login-member-form col-sm-8 col-sm-offset-2 col-md-4  col-md-offset-4">
     <?php wp_login_form(array(
         'label_username' => __( 'Användarnamn' ),

@@ -143,7 +143,7 @@ function VEGA_get_cases(){
 			'singular_name' => __( 'Referens Objekt' )
 		),
 		'public' 		=> true,
-		'has_archive' 	=> true,
+		'has_archive' 	=> false,
 		'supports' 		=> array(
 			'thumbnail',
 			'title',

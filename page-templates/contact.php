@@ -52,11 +52,12 @@
         <div class="row">
 
             <div class="col-xs-12">
-                <h1 class="long-heading"><?php the_field('contact_offert_heading'); ?></h1>
+                <h2><?php the_field('contact_offert_heading'); ?></h2>
+                <div class="h2-underline-container"><div class="h2-underline h2-underlined-center"></div></div>
                 
-              <?php if( get_field('contact_offert_breadtext') ) : ?>
-                <?php the_field('contact_offert_breadtext'); ?>
-              <?php endif; ?>
+                  <?php if( get_field('contact_offert_breadtext') ) : ?>
+                    <?php the_field('contact_offert_breadtext'); ?>
+                  <?php endif; ?>
 
             </div>
 

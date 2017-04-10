@@ -1,6 +1,6 @@
 			
 
-			<div class="container">
+			<div class="container footer-container">
 			<!-- Adding googlemaps map -->
 
   

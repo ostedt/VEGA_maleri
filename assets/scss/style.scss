@@ -26,13 +26,10 @@ $screen-lg-min: 1400px;
 #wpadminbar{
 	background-color: $M_second;
 	margin-top: 7rem;
+	z-index: 99;
 }
 
-@media (max-width: $screen-md-min) {
-	#wpadminbar{
-		display: none;
-	}
-}
+
 
 /**********************************************************
 ***********************************************************
@@ -140,7 +137,8 @@ body{
 	h3,
 	h4,
 	h5,
-	h6{
+	h6,
+	label{
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
 		color: $black;
@@ -165,6 +163,7 @@ body{
 	h1,
 	.h1-heading-frontp{
 		font-size: 5rem;
+		word-break: break-word;
 	}
 
 	h2{
@@ -193,17 +192,26 @@ body{
 }
 
 .long-heading{
-	word-break: break-word;
+	
 }
 
 .h2-underline-container{
 	width: 100%;
 	margin-bottom: 2.5rem;
+	word-break: break-word;
 
 	.h2-underline{
 		width: 4rem;
 		border-bottom: 0.5rem solid $M_second;
 	}
+}
+
+.h2-underlined-center{
+	margin: 0 auto;
+}
+
+a:focus, a:hover{
+	color: $M_second;
 }
 
 @media (min-width: $screen-sm-min) {
@@ -598,7 +606,7 @@ FRONT-PAGE
   overflow: auto;
   display: flex;
   word-wrap: break-word;
-  background-color: $light-gray;
+  background-color: $white;
   width: 100%;
   min-height: 300px;
   padding: 4rem;
@@ -747,6 +755,14 @@ CASE
 ***********************************************************
 **********************************************************/
 
+
+.carousel-caption{
+	background-color: rgba(0, 0, 0, 0.3);
+	h2{
+	color: $white;
+}
+}
+
 .case-archive-container{
 	float: left;
 	padding: 5rem 0;
@@ -759,6 +775,10 @@ body{
 	padding-bottom: 2rem;
 	padding-left: 4rem;
 	padding-right: 4rem;
+	img{
+		width: 100%;
+		height: auto;
+	}
 }}
 
 .case-container{
@@ -901,6 +921,20 @@ CONTACT
 
 body .wp-list-table{
 	width: 100%;
+	.nf-form-content {
+		padding-top: 3rem;
+	}
+	.one-half{
+		margin-left: 0;
+	}
+
+	.ninja-forms-req-symbol, 
+	.nf-error-msg{
+		color: $M_second;
+	}
+	.nf-form-fields-required{
+		font-style: italic;
+	}
 
 	 td{
 	 	padding: 0rem;
@@ -908,6 +942,14 @@ body .wp-list-table{
 
 	 textarea, input{
 	 	padding: 1rem;
+	 }
+
+	 .nf-field-label{
+
+	 	label{
+	 		text-transform: none;
+	 	}
+
 	 }
 
 	 .nf-field-element{
@@ -929,6 +971,10 @@ body .wp-list-table{
 			    border-radius: 4px;
 			    box-sizing: border-box;
 	 		}
+	 	input[type="radio"]{
+	 		float: left;
+	 		margin-top: 5px;
+	 	}
 	 }
 	 .nf-field-container{
 		width: 100%;
@@ -940,6 +986,31 @@ body .wp-list-table{
 	float: left;
 }
 
+
+@media (min-width: $screen-sm-min) {
+	body .wp-list-table{
+
+	.one-half{
+		width: 50%;
+	}
+
+	.nf-field-container{
+		padding: 1rem;
+	}
+
+	.nf-field-element{
+		ul{
+			float: none;
+			li{
+				label{
+					padding: 0 5rem 0 2rem;
+				}
+			}
+		}
+	}
+
+}
+}
 @media (min-width: $screen-md-min) {
 
 	body .wp-list-table{
@@ -1038,6 +1109,71 @@ MEMBER-PAGE
 	}
 }
 
+.read-more{
+	color: $M_second;
+	font-weight: 700;
+}
+.read-more:hover,
+.read-more:focus,
+.read-more:active{
+	color: $black;
+	text-decoration: none;
+}
+
+.content-post{
+	padding: 3rem 3rem 1.5rem 3rem;
+}
+
+body{
+	.sidebar-medarbetare{
+		padding-top: 6rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 3rem;
+
+
+		.sidebar-container{
+			border-top: 1px solid $light-gray;
+			border-bottom: 1px solid $light-gray;
+	    	padding: 5rem;
+			
+			li,
+	    	a{
+				color: $black;
+	    	}
+
+	    	a:hover,
+	    	a:focus,
+	    	a:active{
+	    		color: $M_second;
+	    		text-decoration: none;
+	    	}
+
+			ul{
+				padding: 0;
+				text-decoration: none;
+				list-style-type: none;
+				li{
+					padding: 1rem 0;
+				}
+			}
+			li{
+				text-decoration: none;
+				list-style-type: none;
+				padding: 1rem 0;
+				ul{
+					padding-left: 3rem;
+					padding-top: 0.5rem;
+					li{
+						list-style-type: circle;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 @media (min-width: $screen-md-min) {
 .login-member-text{
 	text-align: center;
@@ -1049,7 +1185,29 @@ MEMBER-PAGE
 .login-member-form{
 	padding-bottom: 10rem;
 }
+body{
+	.container-medarbetare{
+		padding-top: 6rem;
+	}
+	.sidebar-medarbetare{
+		padding-top: 6rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 3rem;
+
+
+		.sidebar-container{
+			border-left: 1px solid $light-gray;
+			border-bottom: 0px solid $light-gray;
+			border-top: 0px solid $light-gray;
+	    	padding: 5rem;
+	    	}}}
 }
+
+@media (min-width: $screen-lg-min) {
+.login-member-text{
+	max-width: 1000px;
+}}
 
 /**********************************************************
 ***********************************************************
@@ -1058,6 +1216,10 @@ FOOTER
 -----------------------------------------------------------
 ***********************************************************
 **********************************************************/
+
+.footer-container{
+	background-color: $light-gray;
+}
 
 footer{
 	float: left;
