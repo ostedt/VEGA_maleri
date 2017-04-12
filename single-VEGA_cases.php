@@ -33,7 +33,7 @@
     <?php //endif; ?>
 
     <?php //if( get_field('case_big_img2') ) :?>
-        <div class="item">
+      <div class="item">
       <div class="carousel-img" style="background-image: url('<?php the_field("case_big_img2"); ?>')">
       <div class="carousel-caption">
         <?php if( get_field('heading_case2') ): ?>
@@ -48,7 +48,7 @@
   <?php //endif; ?>
 
     <?php //if( get_field('case_big_img3') ) :?>
-        <div class="item">
+      <div class="item">
       <div class="carousel-img" style="background-image: url('<?php the_field("case_big_img3"); ?>')">
       <div class="carousel-caption">
         <?php if( get_field('heading_case3') ): ?>
@@ -79,13 +79,14 @@
      <div class="col-xs-12 col-md-8 col-md-offset-2 single-container-content">
      <h1 class=""><?php the_field('heading_case1'); ?></h1>  
         <p><?php the_field('case_breadtext'); ?></p>
-<div class="btn-content-centered">
-      <button class="btn-round" onclick="goBack()">Tillbaka till föregående sida</button>
-</div>
+        <div class="btn-content-centered">
+          <button class="btn-round" onclick="goBack()">Tillbaka till föregående sida</button>
+        </div>
+
         <script>
-        function goBack() {
+          function goBack() {
             window.history.back();
-        }
+          }
         </script>
 
       </div>

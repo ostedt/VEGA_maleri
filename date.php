@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-<!-- "Medarbetarsidan" -->
-
-
+<!-- "Medarbetarsidan" - monthly post archive -->
 
 <!-- Checking if user is logged in -->
 
@@ -38,7 +36,7 @@
   
        <div class="member-content-container col-xs-12 col-md-8">
 
-       <h2><?php the_archive_title(); ?></h2>
+        <h2><?php the_archive_title(); ?></h2>
         
             <!-- IF posts exist, show em with structure from content-archive file, use paginations if theres many.  -->
 
@@ -52,27 +50,28 @@
               <div class="pag-btn pag-btn-prev"><?php echo get_next_posts_link( 'Äldre inlägg' ); ?></div>
               <div class="pag-btn pag-btn-next"><?php echo get_previous_posts_link( 'Nyare inlägg' );?></div>
             </div>
+      </div>
+
+
+        <div class="sidebar-medarbetare col-xs-12 col-md-4">
+
+          <div class="sidebar-container">
+
+            <h4>Medarbetarmeny</h4>
+             <div class="h2-underline-container"><div class="h2-underline"></div></div>
+              <!-- Get menu "Medarbetar"-menu with pages connected to employees -->
+            <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare') ); ?>
+
+            <li id="archives"><?php _e('Nyhetsarkiv'); ?>
+                 <ul>
+                    <?php wp_get_archives('type=monthly'); ?>
+                 </ul>
+            </li>
+                  
+          </div>        
+        </div>
+      </div>
     </div>
-
-
-                <div class="sidebar-medarbetare col-xs-12 col-md-4">
-
-                <div class="sidebar-container">
-
-                <h4>Medarbetarmeny</h4>
-                 <div class="h2-underline-container"><div class="h2-underline"></div></div>
-                  <!-- Get menu "Medarbetar"-menu with pages connected to employees -->
-                <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare') ); ?>
-
-                <li id="archives"><?php _e('Nyhetsarkiv'); ?>
-                     <ul>
-                        <?php wp_get_archives('type=monthly'); ?>
-                     </ul>
-                </li>
-                        
-                        </div>        
-            </div>
-        </div></div>
 <?php
    
 }else{ ?>

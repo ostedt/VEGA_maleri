@@ -40,6 +40,7 @@
 
     	<div class="row">
           <div class="case-archive-container">
+          <!-- activate function fron functions.php -->
             <?php VEGA_get_all_cases(); ?>
           </div>
         </div>

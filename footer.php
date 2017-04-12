@@ -1,7 +1,6 @@
 			
 
 			<div class="container footer-container">
-			<!-- Adding googlemaps map -->
 
   
 				<div class="row">

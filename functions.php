@@ -1,5 +1,5 @@
 <?php
-
+//Setup of theme, adding support and menus
 function VEGA_setup() {
     
     add_theme_support( 'title-tag' );
@@ -99,7 +99,7 @@ function VEGA_get_employees(){
 }
 add_action( 'init', 'VEGA_get_employees' );
 
-/* Fuction to get the latest employees */
+/* Fuction to get all the latest employees */
 
 function VEGA_get_latest_employees() {
     
@@ -111,7 +111,7 @@ function VEGA_get_latest_employees() {
     if ( $posts->have_posts() ) :
     
         while ( $posts->have_posts() ) : $posts->the_post(); 
-
+            //Direct to custom made template-part for loop
         	get_template_part('template-parts/content', 'contact');
               
         endwhile;

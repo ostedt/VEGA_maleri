@@ -5,11 +5,14 @@
 <div class="container">
     <div class="row">
 
-    	<h1>Oups, nu har något gått snett!</h1>
+		<div class="container-error">
+	    	<h1>Oups,</h1>
+	    	<p>Nu har något gått snett!</p>
 
-            <div class="btn-cover">
-              <a class="btn-round" href="">Tillbaka till förstasidan</a>
-            </div>
+	            <div class="btn-cover">
+	              <a class="btn-round" href="<?php echo home_url(); ?>">Tillbaka till förstasidan</a>
+	            </div>
+        </div>
 
     </div>
 </div>

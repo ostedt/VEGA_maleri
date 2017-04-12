@@ -1,4 +1,4 @@
-<!-- Get employee content from custom post and ACF -->
+<!-- Get employee content from custom post and ACF, if field is filled, show -->
 
 <div class="employee-container col-xs-12 col-sm-6 col-md-4 col-lg-3">
 	

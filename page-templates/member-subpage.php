@@ -12,6 +12,8 @@
 
 		<?php if ( is_user_logged_in() ){ ?>
 
+			<!-- get member-header, title and breadtext -->
+
 			<?php if( get_field('emp_header_heading', 11) ) :?>
     		
     				<?php if( get_field('emp_header_img', 11) ): ?>
@@ -39,7 +41,7 @@
 
 			    	<!-- if user is logged in show content from ACF -->
 			    	<div class="member-content-container col-xs-12 col-md-8">
-
+			    	<!-- if certain field is filled show i -->
 
 		 				<?php if( get_field('mu_title') ): ?>
 		              		<h2><?php the_field('mu_title'); ?></h2>
@@ -65,7 +67,7 @@
 		    		</div>
 
 		    <div class="sidebar-medarbetare col-xs-12 col-md-4">
-
+		    <!-- make sidebar with different components -->
                 <div class="sidebar-container">
 
                 <h4>Medarbetarmeny</h4>
@@ -91,12 +93,23 @@
 	    <?php }else{ ?>
 
 	    	<!-- if user is not logged in show content below -->
+<div class="container container-member-notlogedin">
+    <div class="row" style="padding-top:100px">
+    
+    <h2 class="login-member-text">Logga in för att nå medarbetarsidan!</h2>
+<!-- get loginform -->
+    <div class="login-member-form col-sm-8 col-sm-offset-2 col-md-4  col-md-offset-4">
+    <?php wp_login_form(array(
+        'label_username' => __( 'Användarnamn' ),
+        'label_password' => __( 'Lösenord' ),
+        'label_remember' => __( 'Kom ihåg mig' ),
+        'label_log_in'   => __( 'Logga in' ),
+        )); ?>
 
-	    	<div class="row">
-	        
-		    	<h2>För att nå medarbetarsidan måste du logga in!</h2>
 
-		    </div>
+    </div>
+ </div>
+ </div>
 
 	    <?php } ?>
 

@@ -86,23 +86,20 @@
   <div id="about-inner-fp" class="inner">
   <div class="inner-about-text">
     <?php if( get_field('about-heading') ) :?>
-              <h2><?php the_field('about-heading'); ?></h2>
-              <div class="h2-underline-container"><div class="h2-underline"></div></div>
-                
-                <!-- adding breadtext to about -->
-                <?php if( get_field('about-breadtext') ) : ?>
-                  <?php the_field('about-breadtext'); ?>
-                <?php endif; ?>
+      <h2><?php the_field('about-heading'); ?></h2>
+      <div class="h2-underline-container"><div class="h2-underline"></div></div>
+        
+        <!-- adding breadtext to about -->
+        <?php if( get_field('about-breadtext') ) : ?>
+          <?php the_field('about-breadtext'); ?>
+        <?php endif; ?>
 
-            <?php endif; ?>
-            </div>
+    <?php endif; ?>
+    </div>
   </div>
   
   
 </div>
-
-
-   
 
   <div id="contactform-frontp" class="section">
   	

@@ -58,7 +58,7 @@ GENERAL SETTINGS
   .subpage-header h1, .subpage-header p {
     color: #fff; }
 
-.about-page-section p {
+#offert-text p {
   color: #252122; }
 
 .subpage-block-color-grey {
@@ -864,6 +864,23 @@ body .sidebar-medarbetare {
 @media (min-width: 1400px) {
   .login-member-text {
     max-width: 1000px; } }
+
+/**********************************************************
+***********************************************************
+-----------------------------------------------------------
+404
+-----------------------------------------------------------
+***********************************************************
+**********************************************************/
+.container-error {
+  max-width: 900px;
+  padding: 5rem 1rem;
+  text-align: center;
+  margin: 0 auto; }
+
+@media (min-width: 992px) {
+  .container-error {
+    padding: 20rem 1rem; } }
 
 /**********************************************************
 ***********************************************************
