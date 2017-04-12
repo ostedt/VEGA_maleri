@@ -83,7 +83,7 @@
 <div class="about-frontp container section">
 <div class="inner" style="background-image: url('<?php echo the_field("about-img"); ?>'); background-size: cover; background-position: center;"></div>
 
-  <div class="inner">
+  <div id="about-inner-fp" class="inner">
   <div class="inner-about-text">
     <?php if( get_field('about-heading') ) :?>
               <h2><?php the_field('about-heading'); ?></h2>

@@ -13,7 +13,7 @@
         <div class="subpage-header col-xs-12 about-page-section" style="background-image: url('<?php echo the_field("emp_header_img", 11); ?>')">
             <div class="row">
 
-                <div class="col-xs-12 col-md-8">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
                     <h1><?php the_field('emp_header_heading', 11); ?></h1>
                 
                     <?php if( get_field('emp_header_breadtext', 11) ) : ?>
@@ -29,7 +29,7 @@
     <div class="row">
 
     <!-- While have posts, show em from structure template-parts/content -->
-    <div class="col-xs-12 col-md-8">
+    <div class="member-content-container col-xs-12 col-md-8">
 
         <?php while ( have_posts() ) : the_post(); ?>
             
@@ -40,23 +40,30 @@
     </div>
 
    
-                <div class="sidebar-medarbetare col-xs-12 col-md-4">
-                 <button onclick="goBack()">Tillbaka till föregående sida</button>
+            <div class="sidebar-medarbetare col-xs-12 col-md-4">
 
-            <script>
-            function goBack() {
-                window.history.back();
-            }
-            </script>
+                <div class="sidebar-container">
+
+                <h4>Medarbetarmeny</h4>
+                 <div class="h2-underline-container"><div class="h2-underline"></div></div>
                   <!-- Get menu "Medarbetar"-menu with pages connected to employees -->
-                <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'medarbetare', 'menu_class' => 'menu-medarbetare') ); ?>
 
                 <li id="archives"><?php _e('Nyhetsarkiv'); ?>
                      <ul>
                         <?php wp_get_archives('type=monthly'); ?>
                      </ul>
                 </li>
-                
+
+                 <button class="goback-btn" onclick="goBack()">Tillbaka till föregående sida</button>
+
+                        <script>
+                            function goBack() {
+                                window.history.back();
+                            }
+                        </script>
+                        
+                        </div>        
             </div>
             </div>
 

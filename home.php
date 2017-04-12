@@ -46,12 +46,11 @@
 
             <?php endwhile; ?>
             
-            <?php 
-                the_posts_pagination( array(
-                    'prev_text' => 'Föregående',
-                    'next_text' => 'Nästa'
-                ));
-            ?>
+            <div class="pagination">
+              <div class="pag-btn pag-btn-prev"><?php echo get_next_posts_link( 'Äldre inlägg' ); ?></div>
+              <div class="pag-btn pag-btn-next"><?php echo get_previous_posts_link( 'Nyare inlägg' );?></div>
+            </div>
+            
 
     </div>
 
