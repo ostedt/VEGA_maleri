@@ -1,11 +1,12 @@
 <?php
 
+//Adding class for widget that contain compnents for apperence
 class MY_Widget extends WP_Widget {
     public function __construct() {
         
         parent::__construct( 'my-widget', __( 'My Widget', 'tw' ) );
     }
-    
+    //With this function I show how it will look when widget active and filled with info (if)
     public function widget( $arg, $instance ) {
         
         $title = isset( $instance['title'] ) ? $instance['title'] : null;
@@ -31,6 +32,7 @@ class MY_Widget extends WP_Widget {
         
     }
     
+    //Change content in widget from old to new
     public function update ( $new_instance, $old_instance ) {
         
         $instance = $old_instance;
@@ -41,7 +43,7 @@ class MY_Widget extends WP_Widget {
         return $instance;
         
     }
-    
+    //Show how it looks in admin, also take content in widget
     public function form ( $instance ) {
         ?>
 

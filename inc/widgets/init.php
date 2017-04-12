@@ -1,5 +1,5 @@
 <?php 
-
+//register widget function
 require 'class-my-widget.php';
 
 function tw_register_widgets() {

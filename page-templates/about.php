@@ -29,12 +29,12 @@
   	
   </div>
 
-
-
 <!-- add section one in ACF - about page with img-->
 
 <div class="about-frontp container section about-small">
-<div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php if( get_field('part1_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
 
   <div class="inner">
   <div class="inner-about-text">
@@ -55,7 +55,9 @@
 </div>
 
 <div class="about-frontp container section about-big">
-<div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php if( get_field('part1_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
 
   <div class="inner">
   <div class="inner-about-text">
@@ -79,7 +81,9 @@
 <!-- add section two in ACF - about page no img-->
 
 <div class="about-frontp container section about-small">
-<div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php if( get_field('part2_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part2_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
 
   <div class="inner">
   <div class="inner-about-text">
@@ -114,14 +118,18 @@
             <?php endif; ?>
             </div>
   </div>
-  <div class="inner" style="background-image: url('<?php echo the_field("part1_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+  <?php if( get_field('part2_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part2_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
   
 </div>
 	
 <!-- add section three in ACF - about page with img-->
 
 <div class="about-frontp container section about-small">
-<div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php if( get_field('part3_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
 
   <div class="inner">
   <div class="inner-about-text">
@@ -142,7 +150,9 @@
 </div>
 
 <div class="about-frontp container section about-big">
-<div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php if( get_field('part3_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
 
   <div class="inner">
   <div class="inner-about-text">
@@ -162,11 +172,12 @@
   
 </div>
 
-	
 	<!-- add section four in ACF - about page no img-->
 
 <div class="about-frontp container section about-small">
-<div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php if( get_field('part4_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part4_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
 
   <div class="inner">
   <div class="inner-about-text">
@@ -204,7 +215,9 @@
             <?php endif; ?>
             </div>
   </div>
-  <div class="inner" style="background-image: url('<?php echo the_field("part3_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+  <?php if( get_field('part4_about_img') ) :?>
+  <div class="inner" style="background-image: url('<?php echo the_field("part4_about_img"); ?>'); background-size: cover; background-position: center;"></div>
+<?php endif; ?>
   
 </div>
 

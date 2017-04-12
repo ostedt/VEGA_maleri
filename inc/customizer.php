@@ -5,6 +5,8 @@
 *@param WP_Customize_Manager $wp_customize
 */
 
+//Add logo section in customizer
+
     function vega_customize_register( $wp_customize ) {
         
         //Add section for customizer
