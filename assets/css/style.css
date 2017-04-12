@@ -13,7 +13,7 @@ COLOR
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
-FOUNDATION SETTINGS
+CONTAINER SETTINGS
 -----------------------------------------------------------
 ***********************************************************
 **********************************************************/
@@ -55,8 +55,11 @@ GENERAL SETTINGS
   text-align: center;
   background-size: cover;
   background-position: center; }
-  .subpage-header h1 {
+  .subpage-header h1, .subpage-header p {
     color: #fff; }
+
+.about-page-section p {
+  color: #252122; }
 
 .subpage-block-color-grey {
   background-color: #efefef; }
@@ -98,6 +101,9 @@ body i {
   font-family: 'Open Sans', sans-serif;
   color: #252122; }
 
+body i:before {
+  font-size: 4rem; }
+
 body h1,
 body .h1-heading-frontp {
   font-size: 5rem;
@@ -118,8 +124,7 @@ body li,
 body ul,
 body ol,
 body div,
-body span,
-body i {
+body span {
   font-size: 1.5rem; }
 
 .h2-underline-container {
@@ -133,8 +138,12 @@ body i {
 .h2-underlined-center {
   margin: 0 auto; }
 
-a:focus, a:hover {
-  color: #65c087; }
+body a h3:focus,
+body a h3:hover,
+body a:focus,
+body a:hover {
+  color: #65c087;
+  text-decoration: none; }
 
 @media (min-width: 768px) {
   body h1,
@@ -152,8 +161,7 @@ a:focus, a:hover {
   body ul,
   body ol,
   body div,
-  body span,
-  body i {
+  body span {
     font-size: 1.6rem; } }
 
 @media (min-width: 992px) {
@@ -172,8 +180,7 @@ a:focus, a:hover {
   body ul,
   body ol,
   body div,
-  body span,
-  body i {
+  body span {
     font-size: 1.65rem; } }
 
 @media (min-width: 1400px) {
@@ -192,8 +199,7 @@ a:focus, a:hover {
   body ul,
   body ol,
   body div,
-  body span,
-  body i {
+  body span {
     font-size: 1.7rem; } }
 
 /**********************************************************
@@ -226,6 +232,8 @@ input[type="submit"],
   text-align: center;
   padding: 2.5rem;
   border-radius: 50rem;
+  -webkit-border-radius: 50rem;
+  -moz-border-radius: 50rem;
   border: 0.2rem #65c087 solid;
   background-color: #65c087; }
 
@@ -304,7 +312,9 @@ TOP-MENU
   margin-bottom: 0px;
   height: 70px; }
   .navbar .container-fluid {
-    box-shadow: -1px -1px 5px #999; }
+    box-shadow: -1px -1px 5px #999;
+    -moz-box-shadow: -1px -1px 5px #999;
+    -webkit-box-shadow: -1px -1px 5px #999; }
     .navbar .container-fluid .navbar-header .navbar-toggle .icon-bar {
       background-color: #65c087;
       width: 30px;
@@ -344,6 +354,8 @@ TOP-MENU
     .navbar-fixed-top .container-fluid .navbar-collapse {
       border-top: 1px solid transparent;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
       position: fixed;
       overflow: hidden;
       width: 100%; }
@@ -376,6 +388,7 @@ TOP-MENU
         background-color: transparent;
         border: 0;
         -webkit-box-shadow: none;
+        -moz-box-shadow: none;
         box-shadow: none; } }
 
 @media (min-width: 768px) {
@@ -426,11 +439,16 @@ FRONT-PAGE
 .about-frontp {
   display: flex;
   flex-wrap: wrap;
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
   width: 100%;
   background-color: #efefef; }
   .about-frontp .inner {
     overflow: auto;
     display: flex;
+    display: -webkit-flex;
     word-wrap: break-word;
     background-color: #fff;
     width: 100%;
@@ -592,6 +610,8 @@ EMPLOYEE
     width: 15rem;
     height: 15rem;
     border-radius: 100rem;
+    -webkit-border-radius: 100rem;
+    -moz-border-radius: 100rem;
     background-size: cover;
     background-position: center;
     margin: 2rem auto; }
@@ -640,7 +660,18 @@ body .wp-list-table {
     display: inline-block;
     border: 2px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; }
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; }
+  body .wp-list-table .nf-field-element input[type=text]:active,
+  body .wp-list-table .nf-field-element input[type=text]:focus,
+  body .wp-list-table .nf-field-element input[type=email]:active,
+  body .wp-list-table .nf-field-element input[type=email]:focus,
+  body .wp-list-table .nf-field-element textarea:active,
+  body .wp-list-table .nf-field-element textarea:focus {
+    border: 3px solid #65c087; }
   body .wp-list-table .nf-field-element input[type="radio"] {
     float: left;
     margin-top: 5px; }
@@ -685,7 +716,8 @@ ABOUT
   .about-small {
     display: none; }
   .about-big {
-    display: flex; } }
+    display: flex;
+    display: -webkit-flex; } }
 
 /**********************************************************
 ***********************************************************
@@ -709,7 +741,11 @@ MEMBER-PAGE
     background-color: #efefef;
     padding: 3rem;
     border-radius: 0px;
-    box-shadow: 1px 1px 20px #bbb; }
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    box-shadow: 1px 1px 20px #bbb;
+    -moz-box-shadow: 1px 1px 20px #bbb;
+    -webkit-box-shadow: 1px 1px 20px #bbb; }
     .login-member-form form p label {
       width: 100%;
       text-transform: uppercase; }
@@ -721,7 +757,11 @@ MEMBER-PAGE
       display: inline-block;
       border: none;
       border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
       box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       border: 2px solid #ccc; }
     .login-member-form form .login-submit {
       width: 100%;
@@ -746,6 +786,9 @@ body .member-content-container {
   padding-right: 3rem;
   padding-left: 3rem;
   padding-top: 3rem; }
+  body .member-content-container img {
+    width: 100%;
+    height: auto; }
   body .member-content-container .content-post {
     padding-left: 0rem; }
 

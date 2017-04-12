@@ -54,14 +54,6 @@
                         <?php wp_get_archives('type=monthly'); ?>
                      </ul>
                 </li>
-
-                 <button class="goback-btn" onclick="goBack()">Tillbaka till föregående sida</button>
-
-                        <script>
-                            function goBack() {
-                                window.history.back();
-                            }
-                        </script>
                         
                         </div>        
             </div>

@@ -20,21 +20,16 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1400px;
 
-
-
-
 #wpadminbar{
 	background-color: $M_second;
 	margin-top: 7rem;
 	z-index: 99;
 }
 
-
-
 /**********************************************************
 ***********************************************************
 -----------------------------------------------------------
-FOUNDATION SETTINGS
+CONTAINER SETTINGS
 -----------------------------------------------------------
 ***********************************************************
 **********************************************************/
@@ -89,11 +84,16 @@ GENERAL SETTINGS
 	background-size: cover;
 	background-position: center;
 
-
-	h1{
-		color: #fff;
+	h1, p{
+		color: $white;
 	}
 
+}
+
+.about-page-section{
+	p{
+		color: $black;
+	}
 }
 
 .subpage-block-color-grey{
@@ -113,12 +113,6 @@ GENERAL SETTINGS
 	.subpage-header{
 		padding: 10rem 0;
 	}
-
-}
-
-@media (min-width: $screen-lg-min) { 
-
-
 
 }
 
@@ -156,6 +150,10 @@ body{
 		color: $black;
 	}
 
+	i:before{
+		font-size: 4rem;
+	}
+
 }
 
 body{
@@ -184,15 +182,10 @@ body{
 	ul,
 	ol,
 	div,
-	span,
-	i{
+	span{
 		font-size: 1.5rem;
 	}
 
-}
-
-.long-heading{
-	
 }
 
 .h2-underline-container{
@@ -209,9 +202,14 @@ body{
 .h2-underlined-center{
 	margin: 0 auto;
 }
-
-a:focus, a:hover{
-	color: $M_second;
+body{
+	a h3:focus, 
+	a h3:hover,
+	a:focus, 
+	a:hover{
+		color: $M_second;
+		text-decoration: none;
+	}
 }
 
 @media (min-width: $screen-sm-min) {
@@ -241,8 +239,7 @@ a:focus, a:hover{
 		ul,
 		ol,
 		div,
-		span,
-		i{
+		span{
 			font-size: 1.6rem;
 		}
 
@@ -277,8 +274,7 @@ a:focus, a:hover{
 		ul,
 		ol,
 		div,
-		span,
-		i{
+		span{
 			font-size: 1.65rem;
 		}
 
@@ -313,8 +309,7 @@ a:focus, a:hover{
 		ul,
 		ol,
 		div,
-		span,
-		i{
+		span{
 			font-size: 1.7rem;
 		}
 
@@ -354,6 +349,8 @@ input[type="submit"],
 	text-align: center;
     padding: 2.5rem;
     border-radius: 50rem;
+    -webkit-border-radius: 50rem; 
+  	-moz-border-radius: 50rem; 
     border: 0.2rem $M_second solid;
     background-color: $M_second;
 }
@@ -390,8 +387,18 @@ input[type="submit"]:focus,
 		width: 100%;
 		float: left;
 	}
-	.pag-btn-prev{float: left; a{float: left;}}
-	.pag-btn-next{float: left; a{float: left;}}
+	.pag-btn-prev{
+		float: left; 
+		a{
+			float: left;
+		}
+	}
+	.pag-btn-next{
+		float: left; 
+		a{
+			float: left;
+		}
+	}
 }
 
 #btn-case{
@@ -409,15 +416,23 @@ input[type="submit"]:focus,
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
-@media (min-width: $screen-sm-min) {
-.pagination{
 
-	.pag-btn{
-		padding: 3rem;
-		width: 50%;
+@media (min-width: $screen-sm-min) {
+
+	.pagination{
+
+		.pag-btn{
+			padding: 3rem;
+			width: 50%;
+		}
+		.pag-btn-prev{
+			float: right; 
+			a{
+				float: right;
+			}
+		}
 	}
-	.pag-btn-prev{float: right; a{float: right;}}
-}}
+}
 
 /**********************************************************
 ***********************************************************
@@ -427,13 +442,14 @@ TOP-MENU
 ***********************************************************
 **********************************************************/
 
-
 .navbar{
 	background-color: $white;
 	margin-bottom: 0px;
 	height: 70px;
 	.container-fluid{
 		box-shadow: -1px -1px 5px #999;
+		-moz-box-shadow: -1px -1px 5px #999;
+		 -webkit-box-shadow: -1px -1px 5px #999;
 		.navbar-header{
 			.navbar-toggle{
 				.icon-bar{
@@ -504,10 +520,12 @@ TOP-MENU
 		}
 		.navbar-collapse{
 			border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  			-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
             position: fixed;
             overflow: hidden;
-    width: 100%;
+   			width: 100%;
 		}
 		.navbar-collapse.collapse{
 			display: none!important;
@@ -540,6 +558,7 @@ TOP-MENU
        background-color: transparent;
        border: 0;
        -webkit-box-shadow: none;
+       -moz-box-shadow: none;
        box-shadow: none;
     }
 		}
@@ -550,22 +569,16 @@ TOP-MENU
 @media (min-width: $screen-sm-min) {
 
  .navbar,
- .navbar-fixed-top{
+	 .navbar-fixed-top{
 
-	.container-fluid{
+		.container-fluid{
 
-		.navbar-collapse{
-			left: 0;
-			}}}}
-
-
-@media (min-width: $screen-lg-min) {
-
- 
-
+			.navbar-collapse{
+				left: 0;
+			}
+		}
+	}
 }
-
-
 
 /**********************************************************
 ***********************************************************
@@ -624,12 +637,15 @@ FRONT-PAGE
 .about-frontp{
   display: flex;
   flex-wrap: wrap;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   width: 100%;
-	background-color: $light-gray;
+  background-color: $light-gray;
 
 .inner {
   overflow: auto;
   display: flex;
+  display: -webkit-flex;
   word-wrap: break-word;
   background-color: $white;
   width: 100%;
@@ -787,9 +803,9 @@ CASE
 
 .carousel-caption{
 	background-color: rgba(0, 0, 0, 0.3);
-	h2{
-	color: $white;
-}
+		h2{
+			color: $white;
+		}
 }
 
 .case-archive-container{
@@ -798,17 +814,18 @@ CASE
 }
 
 body{
-.single-container-content{
-	float: left;
+	.single-container-content{
+		float: left;
 		padding-top: 2rem;
-	padding-bottom: 2rem;
-	padding-left: 4rem;
-	padding-right: 4rem;
-	img{
-		width: 100%;
-		height: auto;
+		padding-bottom: 2rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		img{
+			width: 100%;
+			height: auto;
+		}
 	}
-}}
+}
 
 .case-container{
 	padding: 1rem;
@@ -922,6 +939,8 @@ EMPLOYEE
 		width: 15rem;
 		height: 15rem;
 		border-radius: 100rem;
+		-webkit-border-radius: 100rem; 
+  		-moz-border-radius: 100rem; 
 		background-size: cover;
 		background-position: center;
 		margin: 2rem auto;
@@ -998,7 +1017,19 @@ body .wp-list-table{
 			    display: inline-block;
 			    border: 2px solid #ccc;
 			    border-radius: 4px;
+			    -webkit-border-radius: 4px; 
+  				-moz-border-radius: 4px; 
 			    box-sizing: border-box;
+			    -webkit-box-sizing: border-box;
+  				-moz-box-sizing: border-box;
+	 		}
+	 	input[type=text]:active,
+	 	input[type=text]:focus,
+	 	input[type=email]:active,
+	 	input[type=email]:focus,
+	 	textarea:active,
+	 	textarea:focus{
+			    border: 3px solid $M_second;
 	 		}
 	 	input[type="radio"]{
 	 		float: left;
@@ -1081,6 +1112,7 @@ ABOUT
 }
 .about-big{
 	display: flex;
+	display: -webkit-flex;
 }
 }
 
@@ -1109,7 +1141,11 @@ MEMBER-PAGE
 		background-color: $light-gray;
 		padding: 3rem;
 		border-radius: 0px;
+		-webkit-border-radius: 0px; 
+  		-moz-border-radius: 0px; 
 		box-shadow: 1px 1px 20px #bbb;
+		-moz-box-shadow: 1px 1px 20px #bbb;
+  		-webkit-box-shadow: 1px 1px 20px #bbb;
 		p{
 
 			label{
@@ -1124,8 +1160,12 @@ MEMBER-PAGE
 						    display: inline-block;
 						    border: none;
 						    border-radius: 0;
+						    -webkit-border-radius: 0; 
+  							-moz-border-radius: 0; 
 						    box-sizing: border-box;
-						        border: 2px solid #ccc;
+						    -webkit-box-sizing: border-box;
+  							-moz-box-sizing: border-box;
+						    border: 2px solid #ccc;
 					}
 			
 		}
@@ -1160,6 +1200,11 @@ body{
 		padding-right: 3rem;
 		padding-left: 3rem;
 		padding-top: 3rem;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
 
 		.content-post{
 			padding-left: 0rem;
@@ -1255,7 +1300,6 @@ body{
 		padding-left: 3rem;
 		padding-right: 3rem;
 		padding-bottom: 3rem;
-
 
 		.sidebar-container{
 			border-left: 1px solid $light-gray;

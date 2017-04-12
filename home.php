@@ -91,6 +91,8 @@
         'label_log_in'   => __( 'Logga in' ),
         )); ?>
 
+    <a href="<?php echo wp_lostpassword_url( get_permalink() ); ?>" title="Lost Password">Lost Password</a>
+
     </div>
  </div>
  </div>

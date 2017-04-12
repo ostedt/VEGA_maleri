@@ -9,6 +9,7 @@
 			<!-- Adding font from googlefonts -->
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
 			<!-- Adding font-awesome -->
+			<link rel="stylesheet" href="../wp-content/themes/VEGA/font-awesome-4.7.0/css/font-awesome.min.css">
 			<link rel="stylesheet" href="../wordpress/wp-content/themes/VEGA/font-awesome-4.7.0/css/font-awesome.min.css">
 
 			<?php wp_head(); ?>
