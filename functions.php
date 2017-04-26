@@ -137,7 +137,7 @@ CASES
 
 function VEGA_get_cases(){
 
-	register_post_type('VEGA_cases', array(
+	register_post_type('referensobjekt', array(
 		'labels' => array(
 			'name' 			=> __( 'Referens Objekt' ),
 			'singular_name' => __( 'Referens Objekt' )
@@ -162,7 +162,7 @@ function VEGA_get_latest_cases() {
     global $paged;
     
     $posts = new WP_Query( array(
-        'post_type' => 'VEGA_cases',
+        'post_type' => 'referensobjekt',
         'posts_per_page' => 3,
         'order_by' => 'date',
     ) );
@@ -193,7 +193,7 @@ function VEGA_get_all_cases() {
     global $paged;
     
     $posts = new WP_Query( array(
-        'post_type' => 'VEGA_cases',
+        'post_type' => 'referensobjekt',
         'posts_per_page' => -1,
         'order_by' => 'date',
     ) );

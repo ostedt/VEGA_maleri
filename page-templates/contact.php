@@ -45,33 +45,6 @@
 
     <?php endwhile; ?>
 
-    <!-- Section containing offert from ninjaforms + heading and text -->
-
-    <?php if( get_field('contact_offert_heading') ) :?>
-        <div class="subpage-header subpage-block-color-grey col-xs-12 about-page-section">
-        <div class="row">
-
-            <div id="offert-text" class="col-xs-12">
-                <h2><?php the_field('contact_offert_heading'); ?></h2>
-                <div class="h2-underline-container"><div class="h2-underline h2-underlined-center"></div></div>
-                
-                  <?php if( get_field('contact_offert_breadtext') ) : ?>
-                    <?php the_field('contact_offert_breadtext'); ?>
-                  <?php endif; ?>
-
-            </div>
-
-            <div class="col-xs-12">
-
-              <?php if( get_field('contact_offert_form') ) : ?>
-                <?php the_field('contact_offert_form'); ?>
-              <?php endif; ?>
-
-            </div>
-
-        </div>
-    <?php endif; ?>
-
 </div>
 
 <!-- Adding map from google -->

@@ -6,9 +6,7 @@ COLOR
 ***********************************************************
 **********************************************************/
 #wpadminbar {
-  background-color: #65c087;
-  margin-top: 7rem;
-  z-index: 99; }
+  background-color: #65c087; }
 
 /**********************************************************
 ***********************************************************
@@ -19,7 +17,6 @@ CONTAINER SETTINGS
 **********************************************************/
 body {
   margin: 0;
-  padding: 4rem 0 0 0;
   float: left;
   width: 100%;
   min-height: 100%; }
@@ -307,36 +304,36 @@ TOP-MENU
 -----------------------------------------------------------
 ***********************************************************
 **********************************************************/
-.navbar {
+body .navbar {
   background-color: #fff;
   margin-bottom: 0px;
   height: 70px; }
-  .navbar .container-fluid {
+  body .navbar .container-fluid {
     box-shadow: -1px -1px 5px #999;
     -moz-box-shadow: -1px -1px 5px #999;
     -webkit-box-shadow: -1px -1px 5px #999; }
-    .navbar .container-fluid .navbar-header .navbar-toggle .icon-bar {
+    body .navbar .container-fluid .navbar-header .navbar-toggle .icon-bar {
       background-color: #65c087;
       width: 30px;
       height: 4px;
       margin: 5px 0px; }
-    .navbar .container-fluid .navbar-header .navbar-toggle:focus,
-    .navbar .container-fluid .navbar-header .navbar-toggle:hover {
+    body .navbar .container-fluid .navbar-header .navbar-toggle:focus,
+    body .navbar .container-fluid .navbar-header .navbar-toggle:hover {
       background-color: #efefef; }
-    .navbar .container-fluid .navbar-header .logo-link .logo-img {
+    body .navbar .container-fluid .navbar-header .logo-link .logo-img {
       padding: 5px 15px;
       height: 70px; }
-    .navbar .container-fluid .navbar-collapse {
+    body .navbar .container-fluid .navbar-collapse {
       background-color: #fff; }
-      .navbar .container-fluid .navbar-collapse ul li {
+      body .navbar .container-fluid .navbar-collapse ul li {
         padding: 1rem; }
-        .navbar .container-fluid .navbar-collapse ul li a {
+        body .navbar .container-fluid .navbar-collapse ul li a {
           text-transform: uppercase;
           color: #252122;
           font-weight: 600; }
-        .navbar .container-fluid .navbar-collapse ul li a:hover {
+        body .navbar .container-fluid .navbar-collapse ul li a:hover {
           color: #65c087; }
-      .navbar .container-fluid .navbar-collapse ul li.current-menu-item a {
+      body .navbar .container-fluid .navbar-collapse ul li.current-menu-item a {
         color: #65c087; }
 
 @media (max-width: 992px) {
@@ -527,7 +524,8 @@ CASE
 
 .case-archive-container {
   float: left;
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  width: 100%; }
 
 body .single-container-content {
   float: left;
